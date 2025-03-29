@@ -15,7 +15,7 @@ const config: Config = {
                 sm: { max: "640px" },
             },
             fontFamily: {
-                monte: ['var(--font-montserrat)', 'sans-serif'],
+                // monte: ['var(--font-montserrat)', 'sans-serif'],
                 inter: ['var(--font-inter)', 'sans-serif'],
             },
             rotate: {
@@ -25,8 +25,15 @@ const config: Config = {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
             },
-            animation: {},
-            keyframes: {},
+            animation: {
+                slideIn: 'slideIn 0.5s ease-out',
+            },
+            keyframes: {
+                slideIn: {
+                    '0%': { transform: 'translateX(100%)' },
+                    '100%': { transform: 'translateX(0)' },
+                },
+            },
             colors: {
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',

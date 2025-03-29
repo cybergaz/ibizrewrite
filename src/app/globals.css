@@ -1,14 +1,90 @@
 @import "tailwindcss";
 
-@plugin "tailwindcss-animate";
-
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+    /* --breakpoint-xs: 300px; */
+    /* --breakpoint-2xl: 100rem; */
+    /* --breakpoint-3xl: 120rem; */
+
+    --font-poppins: Poppins, sans-serif;
+    --font-bodoni: Bodoni, sans-serif;
+    --font-ibarra: Ibarra, sans-serif;
+    --color-accent-blue: #1226A5;
+    --color-accent-magenta: #3e1854;
+    --color-accent-red: #DB3C29;
+    --color-accent-light-gray: #adadad;
+    --color-accent-gray: #545454;
+    --color-accent-dark-gray: #3A3A3A;
+
+    --animate-fade-in-scale: fade-in-scale 0.5s ease-out 0.5s backwards;
+    --animate-slide-in: slide-in 0.5s ease-out 0.5s backwards;
+    --animate-slides: 12s slides infinite linear;
+    --animate-moveDot: moveDot 6s linear infinite;
+
+    @keyframes fade-in-scale {
+        0% {
+            opacity: 0;
+            transform: scale(0.7);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes slide-in {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slides {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes moveDot {
+
+        0%,
+        100% {
+            top: 10%;
+            right: 10%;
+        }
+
+        25% {
+            top: 10%;
+            right: calc(100% - 28px);
+        }
+
+        50% {
+            top: calc(100% - 25px);
+            right: calc(100% - 28px);
+        }
+
+        75% {
+            top: calc(100% - 25px);
+            right: 10%;
+        }
+    }
+
+}
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -121,10 +197,11 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground;
     }
 }

@@ -1,18 +1,6 @@
-//
-// const Services = () => {
-//     return (
-//         <div>
-//             services
-//         </div>
-//     )
-// }
-//
-// export default Services
-
 "use client";
 
 import React, { type SVGProps } from "react";
-// import { GradientHeading } from "@/components/ui/gradient-heading";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
 
 function AppleIcon(props: SVGProps<SVGSVGElement>) {
@@ -418,17 +406,14 @@ const allLogos = [
     { name: "OpenAI", id: 14, img: OpenAIIconBlack },
 ];
 
-export default function LogoCarouselDemo() {
+export function LogoCarouselComp() {
     return (
-        <div className="space-y-8 py-24">
-            <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center space-y-8">
+        <div className="py-20 bg-accent-magenta/0">
+            <div className=" max-w-[85rem] mx-auto bg-accent-magenta/[8%] border border-accent-magenta/10 shadow-2xl rounded-3xl py-10 flex w-full flex-col items-center space-y-16">
                 <div className="text-center">
-                    <h1>
-                        The best are already here
+                    <h1 className="text-4xl font-medium">
+                        Our Clients
                     </h1>
-                    <a href="https://www.newcult.co" target="_blank">
-                        <h1 >Join new cult</h1>
-                    </a>
                 </div>
 
                 <LogoCarousel columnCount={6} logos={allLogos} />
