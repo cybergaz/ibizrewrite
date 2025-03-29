@@ -5,7 +5,7 @@ export const NAVLINKS = [
     { title: "Products", href: "/products" },
     { title: "Services ", href: "/services" },
     // { title: "Blogs", href: "https://ibizkart.blogspot.com/" },
-    { title: "Blogs", href: "" },
+    { title: "Blogs", href: "https://ibizkart.blogspot.com/" },
     { title: "Contact ", href: "/contact" },
 ]
 
