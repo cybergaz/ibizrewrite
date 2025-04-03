@@ -176,7 +176,8 @@ const AboutPage = () => {
                         {/* /> */}
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                            <div className="group hover:transform hover:scale-95 transition-all duration-300 flex flex-col gap-3 border border-white/10 justify-center bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl p-8">
+                            <div className="group relative z-10 p-8 rounded-2xl flex flex-col gap-5 justify-between bg-white/70  text-black" >
+                                <span className="absolute inset-0 size-0 -z-10 group-hover:size-24 translate-1 group-hover:translate-8 group-hover:blur-2xl rounded-full bg-white transition-normal duration-700" />
                                 <div className="flex items-center gap-4">
                                     <div className="p-1.5 rounded-lg bg-accent-magenta/10">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent-magenta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -186,9 +187,11 @@ const AboutPage = () => {
                                     <h2 className="text-lg font-bold text-accent-dark-gray">Extensive Product Portfolio</h2>
                                 </div>
                                 <p className="text-accent-gray">A comprehensive one-stop solution for all your industrial component needs, from bearings to automation systems.</p>
+                                <span className="absolute right-0 bottom-0 size-0 -z-10 group-hover:size-24 -translate-1 group-hover:-translate-8 group-hover:blur-2xl rounded-full bg-[#EFDFFC] transition-normal duration-700" />
                             </div>
 
-                            <div className="group hover:transform hover:scale-95 transition-all duration-300 flex flex-col gap-3 border border-white/10 justify-center bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl p-8">
+                            <div className="group relative z-10 p-8 rounded-2xl flex flex-col gap-5 justify-between bg-white/70  text-black" >
+                                <span className="absolute inset-0 size-0 -z-10 group-hover:size-24 translate-1 group-hover:translate-8 group-hover:blur-2xl rounded-full bg-white transition-normal duration-700" />
                                 <div className="flex items-center gap-4">
                                     <div className="p-1.5 rounded-lg bg-accent-magenta/10">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent-magenta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -198,9 +201,11 @@ const AboutPage = () => {
                                     <h2 className="text-lg font-bold text-accent-dark-gray">Uncompromising Quality</h2>
                                 </div>
                                 <p className="text-accent-gray">Rigorous quality control processes ensure only the finest products reach our valued customers.</p>
+                                <span className="absolute right-0 bottom-0 size-0 -z-10 group-hover:size-24 -translate-1 group-hover:-translate-8 group-hover:blur-2xl rounded-full bg-[#EFDFFC] transition-normal duration-700" />
                             </div>
 
-                            <div className="group hover:transform hover:scale-95 transition-all duration-300 flex flex-col gap-3 border border-white/10 justify-center bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl p-8">
+                            <div className="group relative z-10 p-8 rounded-2xl flex flex-col gap-5 justify-between bg-white/70  text-black" >
+                                <span className="absolute inset-0 size-0 -z-10 group-hover:size-24 translate-1 group-hover:translate-8 group-hover:blur-2xl rounded-full bg-white transition-normal duration-700" />
                                 <div className="flex items-center gap-4">
                                     <div className="p-1.5 rounded-lg bg-accent-magenta/10">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent-magenta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -210,9 +215,11 @@ const AboutPage = () => {
                                     <h2 className="text-lg font-bold text-accent-dark-gray">Competitive Pricing</h2>
                                 </div>
                                 <p className="text-accent-gray text-lg">Premium quality products at the most competitive market rates, ensuring the best value for your investment.</p>
+                                <span className="absolute right-0 bottom-0 size-0 -z-10 group-hover:size-24 -translate-1 group-hover:-translate-8 group-hover:blur-2xl rounded-full bg-[#EFDFFC] transition-normal duration-700" />
                             </div>
 
-                            <div className="group hover:transform hover:scale-95 transition-all duration-300 flex flex-col gap-3 border border-white/10 justify-center bg-white/95 backdrop-blur-lg shadow-2xl rounded-2xl p-8">
+                            <div className="group relative z-10 p-8 rounded-2xl flex flex-col gap-5 justify-between bg-white/70  text-black" >
+                                <span className="absolute inset-0 size-0 -z-10 group-hover:size-24 translate-1 group-hover:translate-8 group-hover:blur-2xl rounded-full bg-white transition-normal duration-700" />
                                 <div className="flex items-center gap-4">
                                     <div className="p-1.5 rounded-lg bg-accent-magenta/10">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent-magenta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -222,6 +229,7 @@ const AboutPage = () => {
                                     <h2 className="text-lg font-bold text-accent-dark-gray">Customer-Centric Approach</h2>
                                 </div>
                                 <p className="text-accent-gray">Dedicated support team providing personalized solutions and ensuring timely delivery for your business needs.</p>
+                                <span className="absolute right-0 bottom-0 size-0 -z-10 group-hover:size-24 -translate-1 group-hover:-translate-8 group-hover:blur-2xl rounded-full bg-[#EFDFFC] transition-normal duration-700" />
                             </div>
                         </div>
                     </div>

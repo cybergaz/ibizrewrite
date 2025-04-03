@@ -18,17 +18,17 @@ const ProductList = ({ products }: { products: Items }) => {
                             <div className="flex h-[70%] relative justify-between gap-5">
                                 <Image className="w-full rounded-xl" src="/images/illustration4.jpg" width={200} height={400} alt="hero image" />
                             </div>
-                            <div className="h-[20%] relative flex gap-2 justify-center items-center pr-5">
+                            <div className="h-[20%] relative flex gap-2 justify-between items-center pl-1">
                                 <div className="absolute overflow-hidden right-0 top-0 group">
                                     <Link
                                         href={product.link}
-                                        className="p-1 pl-4 group flex gap-2 justify-center items-center hover:bg-black/20 hover:backdrop-blur-xs text-white text-lg rounded-full transition-all duration-500 **:transition-all **:duration-500"
+                                        className=" mt-1 p-1 pl-4 group flex gap-2 justify-center items-center hover:bg-black/20 hover:backdrop-blur-xs text-white text-lg rounded-full transition-all duration-500 **:transition-all **:duration-500"
                                     >
-                                        <span className="translate-x-52 z-10 group-hover:translate-x-0"> Explore Category </span>
+                                        <span className="translate-x-52 z-10 group-hover:translate-x-0"> View Details </span>
                                         <ArrowUpRight className="size-9 z-20 text-black group-hover:text-white rounded-full p-2 bg-white/50 group-hover:bg-black/20 border border-transparent group-hover:border-black/50 group-hover:cursor-pointer" />
                                     </Link>
                                 </div>
-                                <Link href={product.link} className="w-[80%] text-lg text-start font-medium">{product.title}</Link>
+                                <Link href={product.link} className="w-[78%] text-lg text-start font-medium">{product.title}</Link>
                                 {/* <button className="p-2 px-3 rounded-full text-sm bg-accent-magenta/60 text-white "> Explore All </button> */}
                             </div>
                         </div>

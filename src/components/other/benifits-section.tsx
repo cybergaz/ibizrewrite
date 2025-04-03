@@ -51,7 +51,7 @@ export default function BenefitsSection() {
     ]
 
     return (
-        <section className="bg-white/40 border py-16 px-20 rounded-3xl">
+        <section className="bg-[#CAC0E3]/60 border py-16 px-20 rounded-3xl">
             <div className="max-w-6xl mx-auto">
                 <div
                     className={`text-center mb-16 transition-all duration-700 opacity-100 translate-y-0`}
