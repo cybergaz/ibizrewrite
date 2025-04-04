@@ -1,3 +1,5 @@
+// alluminium profile, hiwin linear guide, ball screws, epson robots, gearboxes
+
 import BenefitsSection from "@/components/other/benifits-section";
 import { FaqSection } from "@/components/other/faq";
 import { LogoCarouselComp } from "@/components/other/logo-carousel";
@@ -7,8 +9,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowUpRight, User, Package, Diamond, Ellipsis, Layers2, Wrench } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { ImagesSlider } from "@/components/ui/image-slider";
 
 async function Homepage() {
+    const images = [
+        "https://images.unsplash.com/photo-1485433592409-9018e83a1f0d?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ];
 
     const DEMO_FAQS = [
         {
@@ -67,17 +75,18 @@ async function Homepage() {
 
             <div className="max-w-[85rem] mx-auto h-screen px-5 flex justify-between gap-10 relative">
                 {/* <Image className="absolute brightness-[0.6] -z-10 rounded-3xl" src="/images/illustration4.jpg" width={1800} height={900} alt="hero image" /> */}
-                <div className="w-1/2 flex flex-col justify-center gap-10">
-                    <span className=" text-lg font-light animate-slide-in delay">#1 Industrial engineering product supplier </span>
-                    <h1 className="text-6xl font-medium animate-slide-in delay-300 ">
-                        Brand You Like
-                        <br />
-                        Company You Trust
-                    </h1>
-                    <span className="font-light animate-slide-in delay-500">
-                        Industrial Supply, Industrial Robots
-                        Pneumatics & Conveyors
-                    </span>
+                <div className="w-1/2 flex flex-col justify-center -mt-40 gap-10">
+                    {/* <span className=" text-lg font-light animate-slide-in delay">#1 Industrial engineering product supplier </span> */}
+                    {/* <h1 className="text-5xl font-medium animate-slide-in delay-300 "> */}
+                    {/*     Brand You Like */}
+                    {/*     <br /> */}
+                    {/*     Company You Trust */}
+                    {/* </h1> */}
+                    {/* <span className="font-light animate-slide-in delay-500"> */}
+                    {/*     Industrial Supply, Industrial Robots */}
+                    {/*     Pneumatics & Conveyors */}
+                    {/* </span> */}
+                    <ImagesSlider className="h-[40rem]" images={images} />
                     <div className="flex gap-8 animate-slide-in delay-700">
                         <Link href="" className="py-2 group border-b border-black/20 flex gap-2 justify-center items-center">
                             Get in touch
