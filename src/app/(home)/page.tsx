@@ -75,7 +75,7 @@ async function Homepage() {
 
             <div className="max-w-[85rem] mx-auto h-screen px-5 flex justify-between gap-10 relative">
                 {/* <Image className="absolute brightness-[0.6] -z-10 rounded-3xl" src="/images/illustration4.jpg" width={1800} height={900} alt="hero image" /> */}
-                <div className="w-1/2 flex flex-col justify-center -mt-40 gap-10">
+                <div className="w-1/2 flex flex-col justify-center gap-10">
                     {/* <span className=" text-lg font-light animate-slide-in delay">#1 Industrial engineering product supplier </span> */}
                     {/* <h1 className="text-5xl font-medium animate-slide-in delay-300 "> */}
                     {/*     Brand You Like */}
@@ -86,14 +86,18 @@ async function Homepage() {
                     {/*     Industrial Supply, Industrial Robots */}
                     {/*     Pneumatics & Conveyors */}
                     {/* </span> */}
-                    <ImagesSlider className="h-[40rem]" images={images} />
-                    <div className="flex gap-8 animate-slide-in delay-700">
-                        <Link href="" className="py-2 group border-b border-black/20 flex gap-2 justify-center items-center">
+                    <ImagesSlider className="h-[25.5rem] rounded-3xl" overlay={false} images={images} />
+                    <div className="flex justify-between gap-8 px-1 animate-slide-in delay-700">
+                        <Link href="/contact" className="py-2 group border-b border-black/40 hover:border-black flex gap-2 justify-center items-center">
                             Get in touch
                             <ArrowUpRight className="text-black stroke-[1.2px] group-hover:text-white size-7 rounded-full p-1 bg-black/10 group-hover:bg-black transition-all duration-300 group-hover:translate-x-1 group-hover:rotate-45" />
                         </Link>
-                        <Link href="" className="py-2 group border-b border-black flex gap-2 justify-center items-center">
+                        <Link href="/services" className="py-2 group border-b border-black/40 hover:border-black flex gap-2 justify-center items-center">
                             Our Services
+                            <ArrowUpRight className="text-black stroke-[1.2px] group-hover:text-white size-7 rounded-full p-1 bg-black/10 group-hover:bg-black transition-all duration-300 group-hover:translate-x-1 group-hover:rotate-45" />
+                        </Link>
+                        <Link href="/products" className="py-2 group border-b border-black/40 hover:border-black flex gap-2 justify-center items-center">
+                            Browse Products
                             <ArrowUpRight className="text-black stroke-[1.2px] group-hover:text-white size-7 rounded-full p-1 bg-black/10 group-hover:bg-black transition-all duration-300 group-hover:translate-x-1 group-hover:rotate-45" />
                         </Link>
                     </div>
