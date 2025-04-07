@@ -13,6 +13,7 @@ export const NAVLINKS = [
 export const PRODUCTS = [
     {
         category: "Aluminium Profiles",
+        image: "/images/alum.jpg",
         brands: ["IBK"],
         items: [
             { title: "Aluminium Profiles", link: "/products/aluminium-profiles" },
@@ -28,6 +29,7 @@ export const PRODUCTS = [
     // },
     {
         category: "Bearings",
+        image: "/images/bearings.jpg",
         brands: ["SKF", "FAG", "INA", "NTN", "IKO", "KOYO", "ZKL"],
         items: [
             { title: "Ball Bearing", link: "/products/ball-bearing" },
@@ -38,6 +40,7 @@ export const PRODUCTS = [
     },
     {
         category: "Linear Motion Systems",
+        image: "/images/pr3.jpg",
         brands: ["HIWIN", "IBK"],
         items: [
             { title: "Linear Guideways", link: "/products/linear-guideways" },
@@ -52,6 +55,7 @@ export const PRODUCTS = [
     },
     {
         category: "Pneumatic Systems",
+        image: "/images/ps.jpg",
         brands: ["AVENTICS", "FESTO", "REXROTH", "ASCO"],
         items: [
             { title: "Pneumatic Cylinders", link: "/products/pneumatic-cylinders" },
@@ -62,6 +66,7 @@ export const PRODUCTS = [
     },
     {
         category: "Industrial Robots",
+        image: "/images/ir.jpg",
         brands: ["EPSON"],
         items: [
             { title: "SCARA Robots", link: "/products/scara-robots" },
@@ -70,6 +75,7 @@ export const PRODUCTS = [
     },
     {
         category: "SCARA Robot Models",
+        image: "/images/srm.jpg",
         brands: ["EPSON"],
         items: [
             { title: "T3 Robot", link: "/products/t3-robot" },
@@ -87,6 +93,7 @@ export const PRODUCTS = [
     },
     {
         category: "6-Axis Robot Models",
+        image: "/images/6arm.png",
         brands: ["EPSON"],
         items: [
             { title: "VT6 Robot", link: "/products/vt6-robot" },
@@ -97,6 +104,7 @@ export const PRODUCTS = [
     },
     {
         category: "Industrial Grippers",
+        image: "/images/ig.jpg",
         brands: ["DESTACO", "AFAG"],
         items: [
             { title: "Parallel Grippers", link: "/products/parallel-grippers" },
@@ -107,6 +115,7 @@ export const PRODUCTS = [
     },
     {
         category: "Industrial Feeders",
+        image: "/images/products/ir.jpg",
         brands: ["AFAG", "Epson"],
         items: [
             { title: "Bowl Feeder", link: "/products/bowl-feeder" },
@@ -118,6 +127,7 @@ export const PRODUCTS = [
     },
     {
         category: "Rotary Indexing Systems",
+        image: "/images/products/ir.jpg",
         brands: ["DESTACO"],
         items: [
             { title: "Cam Rotary Indexer", link: "/products/cam-rotary-indexer" },
@@ -129,6 +139,7 @@ export const PRODUCTS = [
     },
     {
         category: "Robot Tooling Systems",
+        image: "/images/products/ir.jpg",
         brands: ["DESTACO"],
         items: [
             { title: "Robot Tool Changer", link: "/products/robot-tool-changer" },
@@ -138,6 +149,7 @@ export const PRODUCTS = [
     },
     {
         category: "Vacuum Tooling Systems",
+        image: "/images/products/ir.jpg",
         brands: ["DESTACO", "PASCO"],
         items: [
             { title: "Vacuum Cups", link: "/products/vacuum-cups" },
@@ -149,6 +161,7 @@ export const PRODUCTS = [
     },
     {
         category: "Industrial Clamping Systems",
+        image: "/images/products/ir.jpg",
         brands: ["DESTACO", "CARRLANE", "MCMASTER CARR", "NORELEM", "STEELSMITH"],
         items: [
             { title: "Toggle Clamps", link: "/products/toggle-clamps" },
@@ -157,6 +170,7 @@ export const PRODUCTS = [
     },
     {
         category: "Conveyor Rollers",
+        image: "/images/products/ir.jpg",
         brands: ["IBK"],
         items: [
             { title: "Idler Roller", link: "/products/idler-roller" },
@@ -168,6 +182,7 @@ export const PRODUCTS = [
     },
     {
         category: "Gearboxes & Gearmotors",
+        image: "/images/products/ir.jpg",
         brands: ["BONFIGLIOLI", "BONVARIO", "LUBI"],
         items: [
             { title: "Gearbox", link: "/products/gearbox" },
@@ -177,6 +192,7 @@ export const PRODUCTS = [
     },
     {
         category: "AC Motors",
+        image: "/images/products/ir.jpg",
         brands: ["BHARATH BIJLEE", "SIEMENS", "HINDUSTAN MOTORS", "BONFIGLIOLI"],
         items: [
             { title: "Induction Motor", link: "/products/induction-motor" },
@@ -186,6 +202,7 @@ export const PRODUCTS = [
     },
     {
         category: "Electrical Power Tools",
+        image: "/images/products/ir.jpg",
         brands: ["BOSCH", "FEIN"],
         items: [
             { title: "Power Tools", link: "/products/power-tools" },
@@ -195,6 +212,7 @@ export const PRODUCTS = [
     },
     {
         category: "Pneumatic Hand Tools",
+        image: "/images/products/ir.jpg",
         brands: ["BOSCH"],
         items: [
             { title: "Pneumatic Hand Tools", link: "/products/pneumatic-hand-tools" },
@@ -203,6 +221,7 @@ export const PRODUCTS = [
     },
     {
         category: "Abrasive Wheels & Discs",
+        image: "/images/products/ir.jpg",
         brands: ["BOSCH", "FEIN"],
         items: [
             { title: "Cutting Disc", link: "/products/cutting-disc" },
@@ -216,6 +235,7 @@ export const PRODUCTS = [
     },
     {
         category: "Workstations & Trolleys",
+        image: "/images/products/ir.jpg",
         brands: ["IBK"],
         items: [
             { title: "Work Station", link: "/products/work-station" },
@@ -226,6 +246,7 @@ export const PRODUCTS = [
     },
     {
         category: "Fasteners & Hardware",
+        image: "/images/products/ir.jpg",
         brands: ["APL", "UNBRAKO"],
         items: [
             { title: "Stainless Steel Bolts", link: "/products/ss-bolts" },
@@ -235,6 +256,7 @@ export const PRODUCTS = [
     },
     {
         category: "Hand Tools",
+        image: "/images/products/ir.jpg",
         brands: ["TAPARIA", "STANLEY"],
         items: [
             { title: "Pliers", link: "/products/pliers" },

@@ -35,16 +35,16 @@ const features = [
         title: "Nationwide Distribution Network",
         description: "Timely logistics with guaranteed delivery timelines to all industrial hubs across India."
     },
-    {
-        icon: <IndianRupee className="text-accent-dark-gray" />,
-        title: "Value-Driven Procurement",
-        description: "Competitive wholesale pricing with direct manufacturer partnerships ensuring optimal cost efficiency."
-    },
-    {
-        icon: <HeartHandshake className="text-accent-dark-gray" />,
-        title: "Relationship-Focused Commerce",
-        description: "We prioritize sustainable business relationships over transactional dealings, with customer success at our core."
-    }
+    // {
+    //     icon: <IndianRupee className="text-accent-dark-gray" />,
+    //     title: "Value-Driven Procurement",
+    //     description: "Competitive wholesale pricing with direct manufacturer partnerships ensuring optimal cost efficiency."
+    // },
+    // {
+    //     icon: <HeartHandshake className="text-accent-dark-gray" />,
+    //     title: "Relationship-Focused Commerce",
+    //     description: "We prioritize sustainable business relationships over transactional dealings, with customer success at our core."
+    // }
 ];
 
 const AboutPage = () => {
@@ -89,31 +89,29 @@ const AboutPage = () => {
 
     return (
         <>
-            <div className=" w-screen mx-auto mt-20 flex flex-col gap-32 justify-center items-start ">
+            <div className="w-screen mx-auto mt-20 flex flex-col gap-16 md:gap-32 justify-center items-start">
                 <Image className="object-cover fixed inset-0 w-screen h-screen blur-xs -z-10" src="/images/about_page_bg_blurred.jpg" alt="about page header image" width={1920} height={1080} />
-                <div className=" max-w-[85rem] px-5 mx-auto flex justify-between gap-10">
-                    <div className="">
-                        <Image className="aspect-3/2 object-cover rounded-3xl" src="/images/pexels-photo-7178310.jpeg" alt="about page header image" width={600} height={400} />
+                <div className="max-w-[85rem] px-4 md:px-5 mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-10">
+                    <div className="w-full md:w-auto">
+                        <Image className="aspect-3/2 object-cover rounded-3xl w-full" src="/images/pexels-photo-7178310.jpeg" alt="about page header image" width={600} height={400} />
                     </div>
-                    <div className="flex flex-col w-1/2 gap-10 justify-center">
-                        {/* <h1 className="text-xl font-medium text-accent-light-gray">[Home / <span className="text-accent-red">About</span>]</h1> */}
-                        <h1 className="text-5xl tracking-wide leading-16 font-semibold">
+                    <div className="flex flex-col w-full md:w-1/2 gap-6 md:gap-10 justify-center">
+                        <h1 className="text-3xl md:text-5xl tracking-wide leading-tight md:leading-16 font-semibold">
                             Your Trusted Industrial Equipment Suppliers
                         </h1>
-                        {/* <span className=" text-3xl text-accent-magenta/40 font-medium">since 2014</span> */}
-                        <p className="text-accent-dark-gray text-lg">
+                        <p className="text-accent-dark-gray text-base md:text-lg">
                             IBK Engineers offers a powerful B2B platform designed for efficient sourcing of automation, electrical, mechanical, pneumatic, and tooling components. Trusted by industries across India, the platform brings together a wide range of high-performance products from global leaders like SKF, HIWIN, FESTO, EPSON, DELTA, BOSCH, CARRLANE, and many more.
                         </p>
-                        <div className="flex gap-5 ">
+                        <div className="flex flex-col sm:flex-row gap-3 md:gap-5">
                             <Link
                                 href="/products"
-                                className=" text-accent-magenta font-medium bg-accent-magenta/10 hover:bg-accent-magenta/5 hover:scale-95 transition-all duration-500 w-fit p-2 px-10 rounded-lg flex justify-center items-center"
+                                className="text-accent-magenta font-medium bg-accent-magenta/10 hover:bg-accent-magenta/5 hover:scale-95 transition-all duration-500 w-full sm:w-fit p-2 px-10 rounded-lg flex justify-center items-center"
                             >
                                 Our Products
                             </Link>
                             <Link
                                 href="/contact"
-                                className="border border-accent-magenta/15 text-accent-magenta font-medium transition-all duration-500 w-fit p-2 px-8 rounded-lg gap-2 hover:gap-3.5 flex justify-center items-center"
+                                className="border border-accent-magenta/15 text-accent-magenta font-medium transition-all duration-500 w-full sm:w-fit p-2 px-8 rounded-lg gap-2 hover:gap-3.5 flex justify-center items-center"
                             >
                                 Get In Touch <ArrowRight size={18} />
                             </Link>
@@ -121,13 +119,13 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                <div className="bg-accent-magenta/70 w-screen flex justify-center items-center py-20">
-                    <div className="max-w-[85rem] mx-auto px-32 flex flex-col gap-10 justify-center items-center">
-                        <h1 className="text-4xl text-white font-bold">Our Goal</h1>
-                        <p className="text-2xl font-light text-zinc-100 text-center">
+                <div className="bg-accent-magenta/70 w-screen flex justify-center items-center py-12 md:py-20">
+                    <div className="max-w-[85rem] mx-auto px-4 md:px-8 lg:px-32 flex flex-col gap-6 md:gap-10 justify-center items-center">
+                        <h1 className="text-3xl md:text-4xl text-white font-bold">Our Goal</h1>
+                        <p className="text-xl md:text-2xl font-light text-zinc-100 text-center">
                             Enable Indian industries to access global-quality components faster, smarter, and more cost-effectively—helping businesses reduce downtime, boost efficiency, and maintain production continuity.
                         </p>
-                        <div className="mt-10 flex flex-wrap justify-between gap-3 w-full">
+                        <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-3 w-full">
                             <Card h1="500+" h2="Products Available" />
                             <Card h1="4000+" h2="Happy Clients" />
                             <Card h1="10+" h2="Years of Experience" />
@@ -136,159 +134,96 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                <div className="max-w-[85rem] px-5 mx-auto flex flex-col gap-20">
-                    <div className="flex justify-between gap-14 w-full *:w-1/2">
-                        <Image className="order-1 aspect-3/2 rounded-3xl" src="/images/header_img.png" alt="about us image" width={600} height={500} />
-                        <div className="order-2 flex flex-col flex-wrap gap-5 mt-10">
-                            <h1 className="text-4xl font-semibold text-accent-magenta">Who We Are?</h1>
+                <div className="max-w-[85rem] px-4 md:px-5 mx-auto flex flex-col gap-12 md:gap-20">
+                    <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-14 w-full">
+                        <div className="w-full md:w-1/2 order-2 md:order-1">
+                            <Image className="aspect-3/2 rounded-3xl w-full" src="/images/header_img.png" alt="about us image" width={600} height={500} />
+                        </div>
+                        <div className="w-full md:w-1/2 order-1 md:order-2 flex flex-col flex-wrap gap-4 md:gap-5 mt-0 md:mt-10">
+                            <h1 className="text-3xl md:text-4xl font-semibold text-accent-magenta">Who We Are?</h1>
                             <p className="text-accent-dark-gray">
                                 Since 2014, IBK Engineers Pvt. Ltd. has been a trusted partner in wholesaling, supplying, and trading industrial components. Based in Bengaluru, Karnataka, the company delivers high-quality bearings, linear guides, ball screws, roller chains, clamps, and specialized imported parts from top global brands
                             </p>
-                            <div className="mt-3 flex flex-col gap-5">
-                                <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Comprehensive Product Range </p>
-                                <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Global Brand Partnerships </p>
-                                <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Customer-Centric Approach </p>
+                            <div className="mt-3 flex flex-col gap-4 md:gap-5">
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Comprehensive Product Range </p>
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Global Brand Partnerships </p>
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Customer-Centric Approach </p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="flex justify-between gap-14 w-full *:w-1/2">
-                        <Image className="order-2 aspect-3/2 rounded-3xl" src="/images/pexels-photo-24739784.webp" alt="about us image" width={600} height={500} />
-                        <div className="order-1 flex flex-col flex-wrap gap-5 mt-10">
-                            <h1 className="text-4xl font-semibold text-accent-magenta">Our Commitment To Quality</h1>
+                    <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-14 w-full">
+                        <div className="w-full md:w-1/2 order-2">
+                            <Image className="aspect-3/2 rounded-3xl w-full" src="/images/pexels-photo-24739784.webp" alt="about us image" width={600} height={500} />
+                        </div>
+                        <div className="w-full md:w-1/2 order-1 flex flex-col flex-wrap gap-4 md:gap-5 mt-0 md:mt-10">
+                            <h1 className="text-3xl md:text-4xl font-semibold text-accent-magenta">Our Commitment To Quality</h1>
                             <p className="text-accent-dark-gray">
                                 Ibk Engineers delivers only genuine, brand-certified industrial products from trusted global manufacturers. Every item undergoes strict quality checks to ensure high performance, long-term durability, and compliance with international standards across automation, mechanical, electrical, and tooling categories.
                             </p>
-                            <div className="mt-3 flex flex-col gap-5">
-                                <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Industry-Leading Standards </p>
-                                <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Advanced Technology </p>
-                                <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Trusted Supplier Network </p>
+                            <div className="mt-3 flex flex-col gap-4 md:gap-5">
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Industry-Leading Standards </p>
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Advanced Technology </p>
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Trusted Supplier Network </p>
                             </div>
                         </div>
                     </div>
 
-
-                    <div className="flex justify-between gap-14 w-full *:w-1/2">
-                        <Image className="order-1 aspect-3/2 rounded-3xl" src="/images/pexels-photo-11294358.webp" alt="about us image" width={600} height={500} />
-                        <div className="order-2 flex flex-col flex-wrap gap-5 mt-5">
-                            <h1 className="text-4xl font-semibold text-accent-magenta">What We Offer?</h1>
+                    <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-14 w-full">
+                        <div className="w-full md:w-1/2 order-2 md:order-1">
+                            <Image className="aspect-3/2 rounded-3xl w-full" src="/images/pexels-photo-11294358.webp" alt="about us image" width={600} height={500} />
+                        </div>
+                        <div className="w-full md:w-1/2 order-1 md:order-2 flex flex-col flex-wrap gap-4 md:gap-5 mt-0 md:mt-5">
+                            <h1 className="text-3xl md:text-4xl font-semibold text-accent-magenta">What We Offer?</h1>
                             <div className="text-accent-dark-gray">
                                 Ibk Engineers is your one-stop destination for a comprehensive range of industrial products and automation solutions.
-                                <div className="mt-3 flex flex-col gap-5">
-                                    <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Mechanical & Structural Solutions </p>
-                                    <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Motion & Transmission Systems </p>
-                                    <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Robotics & Automation </p>
-                                    <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Electrical & Control Systems </p>
-                                    <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Power Tools & Hand Tools </p>
-                                    <p className="flex gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Custom Sourcing & Global Procurement </p>
+                                <div className="mt-3 flex flex-col gap-4 md:gap-5">
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Mechanical & Structural Solutions </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Motion & Transmission Systems </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Robotics & Automation </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Electrical & Control Systems </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Power Tools & Hand Tools </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Custom Sourcing & Global Procurement </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-accent-magenta/70 from-accent-dark-gray to-accent-magenta/90 w-screen py-24">
-                    <div className="max-w-[80rem] mx-auto px-5 relative flex flex-col items-center gap-16">
+                <div className="bg-accent-magenta/70 from-accent-dark-gray to-accent-magenta/90 w-screen py-16 md:py-24">
+                    <div className="max-w-[80rem] mx-auto px-4 md:px-5 relative flex flex-col items-center gap-10 md:gap-16">
                         <div className="text-center">
-                            <h1 className="text-4xl font-bold text-white mb-4">Why Choose IBK Engineers</h1>
-                            <p className="text-gray-200 max-w-2xl mx-auto">as a Top Supplier of Industrial Equipment in India?</p>
+                            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 md:mb-4">Why Choose IBK Engineers</h1>
+                            <p className="text-gray-200 max-w-2xl mx-auto text-lg md:text-xl">as a Top Supplier of Industrial Equipment in India?</p>
                         </div>
-                        {/**/}
-                        {/* <Image */}
-                        {/*     className="aspect-3/2 blur-3xl rounded-3xl absolute top-[40%] opacity-30 transition-opacity duration-300" */}
-                        {/*     src="/images/pexels-photo-24739784.webp" */}
-                        {/*     alt="background effect" */}
-                        {/*     width={600} */}
-                        {/*     height={600} */}
-                        {/* /> */}
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 w-full">
                             {features.map((item, index) =>
                                 <div
                                     key={index}
-                                    className="group relative z-10 p-8 rounded-2xl flex flex-col gap-5 justify-between bg-white/70  text-black" >
+                                    className="group relative z-10 p-6 md:p-8 rounded-2xl flex flex-col gap-4 md:gap-5 justify-between bg-white/70 text-black" >
                                     <span className="absolute inset-0 size-0 -z-10 group-hover:size-24 translate-1 group-hover:translate-8 group-hover:blur-2xl rounded-full bg-white transition-normal duration-700" />
-                                    <div className="flex items-center gap-4">
+                                    <div className="flex items-center gap-3 md:gap-4">
                                         <div className="p-1.5 rounded-lg bg-accent-magenta/10">
                                             {item.icon}
                                         </div>
-                                        <h2 className="text-lg font-bold text-accent-dark-gray">{item.title}</h2>
+                                        <h2 className="text-base md:text-lg font-bold text-accent-dark-gray">{item.title}</h2>
                                     </div>
-                                    <p className="text-accent-gray">{item.description}</p>
+                                    <p className="text-accent-gray text-sm md:text-base">{item.description}</p>
                                     <span className="absolute right-0 bottom-0 size-0 -z-10 group-hover:size-24 -translate-1 group-hover:-translate-8 group-hover:blur-2xl rounded-full bg-[#EFDFFC] transition-normal duration-700" />
                                 </div>
                             )}
-
                         </div>
                     </div>
                 </div>
 
-                <div className="w-screen max-w-[85rem] mx-auto px-5 mb-20">
-                    <div className="flex flex-col justify-center items-center gap-8">
-                        <h1 className="text-4xl font-bold mb-4 text-accent-magenta">What Our Customers Say?</h1>
+                <div className="w-screen max-w-[85rem] mx-auto px-4 md:px-5 mb-12 md:mb-20">
+                    <div className="flex flex-col justify-center items-center gap-6 md:gap-8">
+                        <h1 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-accent-magenta">What Our Customers Say?</h1>
                         <AnimatedTestimonials testimonials={testimonials} />
                     </div>
                 </div>
-
-                {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-6"> */}
-                {/*     <div className="flex flex-col gap-4 p-6 border rounded-xl shadow-xl bg-background/90 hover:shadow-2xl transition-shadow"> */}
-                {/*         <div className="flex items-center gap-4"> */}
-                {/*             <div className="w-14 h-14 rounded-full bg-accent-magenta/20 flex items-center justify-center"> */}
-                {/*                 <span className="text-accent-magenta text-xl font-bold">AB</span> */}
-                {/*             </div> */}
-                {/*             <div> */}
-                {/*                 <h3 className="font-semibold text-accent-dark-gray">Aditya Birla Group</h3> */}
-                {/*                 <p className="text-accent-gray text-sm">Manufacturing</p> */}
-                {/*             </div> */}
-                {/*         </div> */}
-                {/*         <p className="text-accent-gray italic"> */}
-                {/*             "IBK Engineers has been our trusted supplier for over 5 years. Their precision components have significantly improved our production efficiency and product quality." */}
-                {/*         </p> */}
-                {/*         <div className="flex text-yellow-500"> */}
-                {/*             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> */}
-                {/*         </div> */}
-                {/*     </div> */}
-                {/**/}
-                {/*     <div className="flex flex-col gap-4 p-6 border rounded-xl shadow-xl bg-background/90 hover:shadow-2xl transition-shadow"> */}
-                {/*         <div className="flex items-center gap-4"> */}
-                {/*             <div className="w-14 h-14 rounded-full bg-accent-magenta/20 flex items-center justify-center"> */}
-                {/*                 <span className="text-accent-magenta text-xl font-bold">TM</span> */}
-                {/*             </div> */}
-                {/*             <div> */}
-                {/*                 <h3 className="font-semibold text-accent-dark-gray">Tata Motors</h3> */}
-                {/*                 <p className="text-accent-gray text-sm">Automotive</p> */}
-                {/*             </div> */}
-                {/*         </div> */}
-                {/*         <p className="text-accent-gray italic"> */}
-                {/*             "The quality of linear guides and ball screws from IBK Engineers is exceptional. Their technical support and prompt delivery have made them our go-to supplier." */}
-                {/*         </p> */}
-                {/*         <div className="flex text-yellow-500"> */}
-                {/*             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> */}
-                {/*         </div> */}
-                {/*     </div> */}
-                {/**/}
-                {/*     <div className="flex flex-col gap-4 p-6 border rounded-xl shadow-xl bg-background/90 hover:shadow-2xl transition-shadow"> */}
-                {/*         <div className="flex items-center gap-4"> */}
-                {/*             <div className="w-14 h-14 rounded-full bg-accent-magenta/20 flex items-center justify-center"> */}
-                {/*                 <span className="text-accent-magenta text-xl font-bold">BL</span> */}
-                {/*             </div> */}
-                {/*             <div> */}
-                {/*                 <h3 className="font-semibold text-accent-dark-gray">Bharat Electronics</h3> */}
-                {/*                 <p className="text-accent-gray text-sm">Electronics</p> */}
-                {/*             </div> */}
-                {/*         </div> */}
-                {/*         <p className="text-accent-gray italic"> */}
-                {/*             "We've been impressed with IBK Engineers' automation solutions. Their products have helped us streamline our manufacturing process and reduce downtime." */}
-                {/*         </p> */}
-                {/*         <div className="flex text-yellow-500"> */}
-                {/*             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> */}
-                {/*         </div> */}
-                {/*     </div> */}
-                {/* </div> */}
-                {/* </div> */}
-
-            </div >
-            {/* <LogoSlider className="mt-28" /> */}
+            </div>
             <LogoCarouselComp />
         </>
     )
