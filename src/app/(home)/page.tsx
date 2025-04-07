@@ -3,7 +3,6 @@
 import BenefitsSection from "@/components/other/benifits-section";
 import { FaqSection } from "@/components/other/faq";
 import { LogoCarouselComp } from "@/components/other/logo-carousel";
-import LogoSlider from "@/components/other/logo-slider";
 import ProductCategory from "@/components/other/product_category";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowUpRight, User, Package, Diamond, Ellipsis, Layers2, Wrench } from "lucide-react";

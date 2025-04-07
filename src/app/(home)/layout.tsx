@@ -1,6 +1,5 @@
 import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
-import LogoSlider from "@/components/other/logo-slider";
 import Image from "next/image";
 
 export default function HomeLayout({
