@@ -4,7 +4,7 @@ import { PRODUCTS } from "@/lib/constants"
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, EllipsisVertical } from "lucide-react";
+import { ArrowUpRight, EllipsisVertical, Search } from "lucide-react";
 import router from "next/router";
 import {
     Popover,
@@ -29,20 +29,39 @@ const ProductCategory = () => {
                                     <PopoverTrigger className="cursor-pointer h-fit rounded-full">
                                         <EllipsisVertical className="size-9 z-20 text-black group-hover:text-white rounded-full p-2 bg-white/50 group-hover:bg-black/20 border border-transparent group-hover:border-black/50 group-hover:cursor-pointer" />
                                     </PopoverTrigger>
-                                    <PopoverContent>Place content for the popover here.</PopoverContent>
+                                    <PopoverContent className="animate-slide-in-forward bg-white/70 backdrop-blur-md">
+                                        {
+                                            product.items.map((item, index) => (
+                                                <Link
+                                                    key={index}
+                                                    href={item.link}
+                                                    className="flex gap-2 items-center p-2 px-5 border-b hover:bg-black/40 hover:text-white transition-all duration-200"
+                                                >
+                                                    {/* <Search className="text-accent-magenta" /> */}
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                            ))
+                                        }
+
+                                    </PopoverContent>
                                 </Popover>
                             </div>
                             <div className="h-[20%] relative flex gap-2 justify-between items-center">
-                                <Link href={product.category} className="w-[80%] text-lg font-medium">{product.category}</Link>
-                                <div className="absolute overflow-hidden right-0 top-0 group">
-                                    <button
-                                        // onClick={() => router.push(product)}
-                                        className="p-1 pl-4 mt-1 group flex gap-2 justify-center items-center hover:bg-black/20 hover:backdrop-blur-xs text-white text-lg rounded-full transition-all duration-500 **:transition-all **:duration-500"
-                                    >
+                                <Link
+                                    href={`/products?c=${product.category.replace(/\s+/g, '+')}`}
+                                    className="w-[80%] text-lg font-medium"
+                                >
+                                    {product.category}
+                                </Link>
+                                <Link
+                                    href={`/products?c=${product.category.replace(/\s+/g, '+')}`}
+                                    className="absolute overflow-hidden right-0 top-0 group"
+                                >
+                                    <button className="p-1 pl-4 mt-1 group hover:cursor-pointer flex gap-2 justify-center items-center hover:bg-black/20 hover:backdrop-blur-xs text-white text-lg rounded-full transition-all duration-500 **:transition-all **:duration-500" >
                                         <span className="translate-x-52 z-10 group-hover:translate-x-0"> Explore Category </span>
                                         <ArrowUpRight className="size-9 z-20 text-black group-hover:text-white rounded-full p-2 bg-white/50 group-hover:bg-black/20 border border-transparent group-hover:border-black/50 group-hover:cursor-pointer" />
                                     </button>
-                                </div>
+                                </Link>
                                 {/* <button className="p-2 px-3 rounded-full text-sm bg-accentmagenta/60 text-white "> Explore All </button> */}
                             </div>
                         </div>
@@ -50,23 +69,23 @@ const ProductCategory = () => {
                 }
             </div>
 
-            {
-                loadItems < PRODUCTS.length ?
-                    <Link
-                        href="/products"
-                        className="group mt-10 flex gap-2 justify-center items-center bg-black text-white p-3 px-8 text-lg rounded-full **:transition-all **:duration-300"
-                    >
-                        <span> Explore All Categories </span>
-                        <ArrowUpRight className="size-0 group-hover:size-5" />
-                    </Link>
-                    :
-                    <button
-                        onClick={() => setLoadItems(8)}
-                        className="mt-14 p-2 px-5 w-fit border border-accent-magenta/20 hover:bg-accent-magenta/5 rounded-lg text-accent-magenta font-medium cursor-pointer"
-                    >
-                        Hide Categories
-                    </button>
-            }
+            {/* { */}
+            {/*     loadItems < PRODUCTS.length ? */}
+            <Link
+                href="/products"
+                className="group mt-10 flex gap-2 justify-center items-center bg-black text-white p-3 px-8 text-lg rounded-full **:transition-all **:duration-300"
+            >
+                <span> Explore All Categories </span>
+                <ArrowUpRight className="size-0 group-hover:size-5" />
+            </Link>
+            {/*         : */}
+            {/*         <button */}
+            {/*             onClick={() => setLoadItems(8)} */}
+            {/*             className="mt-14 p-2 px-5 w-fit border border-accent-magenta/20 hover:bg-accent-magenta/5 rounded-lg text-accent-magenta font-medium cursor-pointer" */}
+            {/*         > */}
+            {/*             Hide Categories */}
+            {/*         </button> */}
+            {/* } */}
         </div >
     )
 }

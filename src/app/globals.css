@@ -19,6 +19,7 @@
 
     --animate-fade-in-scale: fade-in-scale 0.5s ease-out 0.5s backwards;
     --animate-slide-in: slide-in 0.5s ease-out 0.5s backwards;
+    --animate-slide-in-forward: slide-in 0.5s ease-out;
     --animate-slides: 12s slides infinite linear;
     --animate-moveDot: moveDot 6s linear infinite;
 

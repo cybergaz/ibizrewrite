@@ -29,7 +29,7 @@ const Header = ({ className }: { className?: String }) => {
 
 
     return (
-        <div className={cn("z-50 fixed w-screen min-h-32 justify-center items-center flex bg-transparent transition-normal duration-500", isScrolled && "min-h-20 bg-white/70 backdrop-blur-sm ", className)}>
+        <div className={cn("z-50 fixed w-screen min-h-32 flex justify-center items-center bg-transparent transition-normal duration-500", isScrolled && "min-h-20 bg-white/70 backdrop-blur-sm ", className)}>
             <Navbar />
         </div>
     )

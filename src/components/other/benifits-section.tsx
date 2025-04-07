@@ -33,20 +33,20 @@ export default function BenefitsSection() {
     const benefits = [
         {
             icon: <Building2 className="h-6 w-6" />,
-            title: "Innovative Green Technologies",
+            title: "Innovative Engineering Solutions",
             description:
-                "Explore our cutting-edge solutions designed to reduce environmental impact and promote sustainability.",
+                "Stay ahead with cutting - edge industrial components designed for precision, durability, and efficiency.We bring you top- tier technology to streamline your operations.",
         },
         {
             icon: <Leaf className="h-6 w-6" />,
-            title: "Sustainable Projects",
-            description: "Delve into our portfolio of successful sustainability projects that are making a real difference.",
+            title: "Reliable & Proven Products",
+            description: "Every product we offer is tested for quality and reliability. Our extensive portfolio features trusted brands, ensuring you get only the best for your industry.",
         },
         {
             icon: <Users className="h-6 w-6" />,
-            title: "Community & Partnerships",
+            title: "Strong Industry Partnerships",
             description:
-                "Join a thriving network of like-minded individuals and organizations dedicated to building a sustainable future.",
+                "We believe in building long-term relationships, working closely with clients and global manufacturers to deliver tailored solutions that truly make an impact.",
         },
     ]
 
@@ -56,10 +56,9 @@ export default function BenefitsSection() {
                 <div
                     className={`text-center mb-16 transition-all duration-700 opacity-100 translate-y-0`}
                 >
-                    <h2 className="text-4xl font-medium text-gray-900 mb-4">Our Main Benefits</h2>
+                    <h2 className="text-4xl font-medium text-gray-900 mb-4">Our Key Advantages</h2>
                     <p className="text-gray-500 max-w-2xl mx-auto">
-                        We offer innovative solutions that not only enhance environmental sustainability but also drive economic
-                        efficiency.
+                        Quality, Efficiency, and Lasting Partnerships
                     </p>
                 </div>
 

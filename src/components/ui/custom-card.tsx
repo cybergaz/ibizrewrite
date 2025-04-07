@@ -15,7 +15,7 @@ const Card = ({ h1, h2 }: { h1: string, h2: string }) => {
                 <div className="absolute top-16 -left-2 w-[200px] h-[40px] bg-[#c7c7c7] opacity-40 shadow-[0_0_50px_white] blur-lg transform rotate-[40deg]" />
 
                 {/* Text Content */}
-                <div className="text-4xl font-bold bg-gradient-to-r from-accent-gray via-white to-accent-gray bg-clip-text text-transparent">{h1}</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-white to-accent-dark-gray bg-clip-text text-transparent">{h1}</div>
                 <div className='text-white mt-2'>{h2}</div>
 
                 {/* Borders */}

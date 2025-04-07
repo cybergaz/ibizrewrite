@@ -6,18 +6,19 @@ import { NAVLINKS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-
+import { SearchBar } from "./SearchBar"
 
 const Navbar = () => {
-
     return (
         <div className={cn("w-[87rem] mx-auto px-5 flex justify-between items-center rounded-md transition-normal duration-500")}>
-
             <Image src="/images/logo.png" width={135} height={100} alt="logo" />
-            <Navlinks className=" justify-center items-center" />
-            <Button className=" cursor-pointer text-sm rounded-md bg-accent-magenta/10 text-accent-magenta hover:bg-accent-magenta/20 transition-colors duration-300">
-                Download Brochure
-            </Button>
+            <Navlinks className="justify-center items-center" />
+            <div className="flex items-center gap-4">
+                <SearchBar />
+                <Button className="cursor-pointer text-sm rounded-md bg-accent-magenta/10 text-accent-magenta hover:bg-accent-magenta/20 transition-colors duration-300">
+                    Download Brochure
+                </Button>
+            </div>
         </div>
     )
 }

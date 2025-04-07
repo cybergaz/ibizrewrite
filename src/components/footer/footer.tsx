@@ -6,25 +6,25 @@ import Link from "next/link"
 const Footer = () => {
     return (
         <div className="pt-16 pb-10 flex bg-accent-magenta/90 backdrop-blur-md text-white">
-            <div className="max-w-[85rem] mx-auto px-5 flex flex-col gap-16">
+            <div className="max-w-[85rem] mx-auto w-full px-5 flex flex-col gap-16">
                 <div className="flex">
                     <div className="w-2/3 flex flex-col gap-8">
                         <h1 className="text-3xl font-light space-y-3">
-                            IT'S TIME TO SWITCH TO BETTER TOOLING,
+                            Find the Best Industrial Solution for Your Business
                             <br />
-                            <span className="text-accent-light-gray">WITH IBIZKART ENGINEERS</span>
+                            <span className="text-accent-light-gray">with IBK Engineers</span>
                         </h1>
-                        <div className="flex gap-10">
-                            <span className="flex gap-3 font-light"> <CircleCheckBig color="#C8B1E1" /> Content yet to be filled</span>
-                            <span className="flex gap-3 font-light"> <CircleCheckBig color="#C8B1E1" /> Content yet to be filled</span>
-                        </div>
+                        {/* <div className="flex gap-10"> */}
+                        {/*     <span className="flex gap-3 font-light"> <CircleCheckBig color="#C8B1E1" /> Content yet to be filled</span> */}
+                        {/*     <span className="flex gap-3 font-light"> <CircleCheckBig color="#C8B1E1" /> Content yet to be filled</span> */}
+                        {/* </div> */}
                     </div>
-                    <div className="w-1/3 text-white flex flex-col gap-8">
-                        <span>Maximizing Efficiency and Sustainability: Leveraging Renewable Resources for Superior Industrial Solutions and Services</span>
+                    <div className="w-1/3 text-white flex flex-col justify-center items-end gap-8">
+                        {/* <span>Maximizing Efficiency and Sustainability: Leveraging Renewable Resources for Superior Industrial Solutions and Services</span> */}
                         <Link
                             href="/contact"
                             className="w-fit flex justify-center items-center gap-2 hover:gap-4 bg-white hover:bg-white/90 text-black px-5 py-4 rounded-full cursor-pointer transition-all duration-300">
-                            Get in touch <ArrowUpRight className="w-5 h-5" />
+                            Get In Touch <ArrowUpRight className="w-5 h-5" />
                         </Link>
                     </div>
                 </div>
@@ -33,13 +33,12 @@ const Footer = () => {
                     <div className="flex flex-col gap-6">
                         <Image src="/images/logo.png" width={100} height={50} alt="ibizkart logo" />
                         <h1 className="text-2xl font-light">
-                            Imaginative minds
-                            <br />
-                            <span className="text-accent-dark-gray">
-                                for imaginative brands
+                            Global Industrial
+                            <span className="text-accent-dark-gray pl-2">
+                                Sourcing Partner
                             </span>
                         </h1>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 mt-5">
                             <span className="font-medium">Subscribe to our newsletter</span>
                             <div className="relative flex w-80">
                                 <Input

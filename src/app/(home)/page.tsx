@@ -1,4 +1,4 @@
-// alluminium profile, hiwin linear guide, ball screws, epson robots, gearboxes
+// Top selling -> alluminium profile, hiwin linear guide, ball screws, epson robots, gearboxes
 
 import BenefitsSection from "@/components/other/benifits-section";
 import { FaqSection } from "@/components/other/faq";
@@ -10,6 +10,14 @@ import { ArrowRight, ArrowUpRight, User, Package, Diamond, Ellipsis, Layers2, Wr
 import Image from "next/image";
 import Link from "next/link";
 import { ImagesSlider } from "@/components/ui/image-slider";
+import {
+    ShoppingCart,
+    Globe,
+    Cog,
+    Truck,
+    BadgeIndianRupee,
+    HeartHandshake
+} from 'lucide-react';
 
 async function Homepage() {
     const images = [
@@ -20,51 +28,59 @@ async function Homepage() {
 
     const DEMO_FAQS = [
         {
-            question: "What makes your platform unique?",
-            answer: "Our platform stands out through its intuitive design, powerful automation capabilities, and seamless integration options. We've focused on creating a user experience that combines simplicity with advanced features.",
+            question: "What kind of industrial products do you offer?",
+            answer: "We supply a wide range of industrial and mechanical products, including valves, fittings, motors, pumps, and automation components. Whether you need standard parts or specific solutions, we provide high-quality, durable industrial equipment that meets the demands of various industries.",
         },
         {
-            question: "How does the pricing structure work?",
-            answer: "We offer flexible, transparent pricing tiers designed to scale with your needs. Each tier includes a core set of features, with additional capabilities as you move up. All plans start with a 14-day free trial.",
+            question: "Are your products reliable and quality-tested?",
+            answer: "Yes, every product we supply goes through strict quality control checks. We work with trusted industrial brands known for their performance and durability, so you can be confident you're getting reliable, long-lasting components.",
         },
         {
-            question: "What kind of support do you offer?",
-            answer: "We provide comprehensive support through multiple channels. This includes 24/7 live chat, detailed documentation, video tutorials, and dedicated account managers for enterprise clients.",
+            question: "Do you provide custom engineering solutions for industries?",
+            answer: "Absolutely. We specialize in tailored engineering solutions to meet the unique needs of your business. From custom component sourcing to optimized product selection, we help streamline your operations with efficient and innovative industrial solutions.",
+        },
+        {
+            question: "Which industries do you serve with your products?",
+            answer: "Our products are used across multiple sectors including manufacturing, automotive, construction, pharmaceutical, food processing, and oil & gas. We understand industry-specific needs and deliver industrial supply solutions that fit.",
+        },
+        {
+            question: "Can I get support after the purchase or place a bulk order?",
+            answer: "Yes! We offer full after-sales support, including technical assistance and maintenance guidance. For bulk orders, just reach out to us — we’ll provide a customized quotation with competitive pricing and fast pan-India delivery.",
         },
     ];
 
     const features = [
         {
-            icon: <Wrench className="text-accent-magenta" />,
-            title: "Production and Assembly",
-            description: "Details on production processes, assembly, capacity, and product types."
+            icon: <ShoppingCart className="text-accent-magenta" />,
+            title: "One-Stop Industrial Store",
+            description: "Find everything from bearings and fasteners to robots and CNC controllers."
         },
         {
-            icon: <Diamond className="text-accent-magenta" />,
-            title: "Custom Manufacturing",
-            description: "Custom product creation with design and customization options. "
+            icon: <Globe className="text-accent-magenta" />,
+            title: "Trusted Global Brands",
+            description: "Original products from SKF, FESTO, BOSCH, PANASONIC, EPSON, HIWIN, and more."
         },
         {
-            icon: <Layers2 className="text-accent-dark-gray" />,
-            title: "Quality Control",
-            description: "Procedures and systems in place to ensure high product quality. "
+            icon: <Cog className="text-accent-dark-gray" />,
+            title: "Engineering Expertise",
+            description: "Expert consultation for industrial automation and assembly solutions."
         },
         {
-            icon: <Package className="text-accent-dark-gray" />,
-            title: "Logistics and Delivery",
-            description: "Details on delivery and logistics services, including shipping and storage. "
+            icon: <Truck className="text-accent-dark-gray" />,
+            title: "Pan-India Delivery",
+            description: "Fast, reliable shipping across all major industrial cities."
         },
         {
-            icon: <Layers2 className="text-accent-dark-gray" />,
-            title: "Technology and Innovation",
-            description: "Details on the latest manufacturing technologies and ongoing innovations."
+            icon: <BadgeIndianRupee className="text-accent-dark-gray" />,
+            title: "Competitive Pricing",
+            description: "Direct supply with better margins for businesses of all sizes."
         },
         {
-            icon: <User className="text-accent-dark-gray" />,
-            title: "Customer Support",
-            description: "Information on customer support services, including contact details and hours."
-        },
-    ]
+            icon: <HeartHandshake className="text-accent-dark-gray" />,
+            title: "People Over Profits",
+            description: "We prioritize long-term relationships and customer satisfaction."
+        }
+    ];
 
     return (
         <div className="-mt-16">
@@ -107,7 +123,7 @@ async function Homepage() {
                     <div className="flex gap-8 justify-between">
                         <div className="flex flex-col gap-5">
                             <div className="h-[35%] animate-fade-in-scale w-[18rem] p-5 shadow-2xl text-lg flex justify-center items-center bg-accent-light-gray/25 border border-black/5 rounded-2xl">
-                                10+ Years of Dedicated Service, 100+ Happy Clients
+                                10+ Years of Dedicated Service
                             </div>
                             <Image className="animate-fade-in-scale delay-700 w-[18rem] h-[65%] rounded-xl self-end" src="/images/header_img.png" width={200} height={200} alt="hero image" placeholder="empty" />
                             {/* <Image className="w-[19rem] h-[8rem] rounded-xl self-end" src="/images/pexels-photo-24739784.webp" width={200} height={400} alt="hero image" /> */}
@@ -120,7 +136,10 @@ async function Homepage() {
                                 <button className="self-start rounded-full p-1.5 hover:bg-white/20"><Ellipsis className="text-white" /> </button>
                             </div>
                             <div className="flex gap-2 items-center justify-between pr-5">
-                                <ArrowUpRight className="text-white size-10 rounded-full p-2 bg-white/50 hover:bg-black/20 border border-transparent hover:border-black/50 transition-all duration-300 hover:cursor-pointer" />
+                                <Link
+                                    href={"/products"}>
+                                    <ArrowUpRight className="text-white size-10 rounded-full p-2 bg-white/50 hover:bg-black/20 border border-transparent hover:border-black/50 transition-all duration-300 hover:cursor-pointer" />
+                                </Link>
                                 <span className="text-white text-lg">Discover Our <br /> New Products</span>
                             </div>
                         </div>
@@ -128,53 +147,58 @@ async function Homepage() {
 
                     <div className="p-10 flex justify-between rounded-2xl shadow-2xl animate-fade-in-scale delay-200 bg-accent-light-gray/25 border border-black/5">
                         <div className="flex flex-col gap-2 items-start">
-                            <h2 className="text-5xl ">20k+</h2>
-                            <span className="text-sm text-accent-dark-gray">Products sold annualy</span>
+                            <h2 className="text-5xl ">10+</h2>
+                            <span className="text-sm text-accent-dark-gray">Years Of Experience</span>
                         </div>
                         <div className="flex flex-col gap-2 items-start">
-                            <h2 className="text-5xl ">78+</h2>
-                            <span className="text-sm text-accent-dark-gray">Products available</span>
+                            <h2 className="text-5xl ">4k+</h2>
+                            <span className="text-sm text-accent-dark-gray">Happy Clients</span>
                         </div>
                         <div className="flex flex-col gap-2 items-start">
-                            <h2 className="text-5xl ">120</h2>
-                            <span className="text-sm text-accent-dark-gray">Something to write</span>
+                            <h2 className="text-5xl ">500+</h2>
+                            <span className="text-sm text-accent-dark-gray">Products Available</span>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <div className="bg-accent-magenta/70 py-20">
+            <div className="bg-accent-magenta/80 py-20">
 
                 <div className="max-w-[80rem] mx-auto px-5 text-white flex gap-14 justify-between items-center">
-                    <div className=" w-72 h-28 px-3 flex gap-5 justify-center items-center border border-accent-light-gray rounded-2xl">
+                    <div className=" w-72 h-28 px-3 flex gap-5 justify-center items-center border-accent-light-gray bg-[#82599a]/80 rounded-2xl">
                         <Image className=" rounded-xl invert" src="/images/quality.svg" width={50} height={50} alt="image" />
                         <span className="text-xl font-medium">Uncompromising Quality</span>
                     </div>
 
-                    <div className=" w-72 h-28 px-3 flex gap-5 justify-center items-center border border-accent-light-gray rounded-2xl">
+                    <div className=" w-72 h-28 px-3 flex gap-5 justify-center items-center border-accent-light-gray bg-[#82599a]/80 rounded-2xl">
                         <Image className=" rounded-xl invert" src="/images/global2.svg" width={50} height={50} alt="image" />
                         <span className="text-xl font-medium">Global Reach</span>
                     </div>
 
-                    <div className=" w-72 h-28 px-3 flex gap-5 justify-center items-center border border-accent-light-gray rounded-2xl">
+                    <div className=" w-72 h-28 px-3 flex gap-5 justify-center items-center border-accent-light-gray bg-[#82599a]/80 rounded-2xl">
                         <Image className=" rounded-xl invert" src="/images/range.svg" width={50} height={50} alt="image" />
                         <span className="text-xl font-medium">Extensive Product Range</span>
                     </div>
 
-                    <div className=" w-72 h-28 px-3 flex gap-5 justify-center items-center border border-accent-light-gray rounded-2xl">
+                    <div className=" w-72 h-28 px-3 flex gap-5 justify-center items-center border-accent-light-gray bg-[#82599a]/80 rounded-2xl">
                         <Image className=" rounded-xl invert" src="/images/clock.svg" width={50} height={50} alt="image" />
                         <span className="text-xl font-medium">Available to you 24/7</span>
                     </div>
                 </div>
 
-                <div className="mt-20 flex flex-col items-center justify-center w-screen gap-10 ">
-                    <span className="text-2xl font-light text-white">  LEARN MORE ABOUT <span className="text-zinc-300/80">IBIZKART ENGINEERS</span> </span>
+                <div className="mt-20 max-w-[80rem] mx-auto px-5 flex flex-col items-center justify-center w-screen gap-10 ">
+                    <span className="mt-5 w-[85%] text-4xl font-bold text-center text-white">High-Quality Industrial Equipment & Automation Solutions for Your Business</span>
+                    <p className="text-lg text-center font-light text-[#f4ebfc]">
+                        IBK Engineers Pvt. Ltd. is one of the <span className="font-medium text-white">top wholesale suppliers of industrial products in India</span>, helping businesses since 2014. We deal in everything from bearings, ball screws, and linear guides to grippers, clamps, sprockets, and a whole lot more. Plus, we supply imported components from trusted global brands like Norelem, Misumi, Destaco, Carrlane, and McMaster.
+                        <br className="mb-5" />
+                        Our goal is simple — make it easy for industries to get reliable products at fair prices, with fast delivery and solid support.
+                    </p>
                     <Link
                         href="/about"
                         className="group flex gap-2 justify-center items-center bg-white p-3 px-8 text-lg rounded-full **:transition-all **:duration-300"
                     >
-                        <span className="text-black"> About Us </span>
+                        <span className="text-black"> Read More </span>
                         <ArrowUpRight className="size-0 group-hover:size-5" />
                     </Link>
                 </div>
@@ -182,16 +206,16 @@ async function Homepage() {
 
             <div className="w-screen">
                 <div className="max-w-[85rem] mx-auto px-5 py-20 flex flex-col gap-14 justify-center items-center">
-                    <h1 className="text-4xl font-medium ">Featured Products</h1>
+                    <h1 className="text-4xl font-medium ">Top Selling Products</h1>
                     <div className="flex gap-5 justify-between items-center ">
                         <div className="bg-accent-dark-gray/50 h-[14rem] w-[28rem] rounded-lg p-5 flex gap-5">
                             <Image className="rounded-lg h-full w-[50%]" src="/images/illustration3.jpg" width={200} height={400} alt="hero image" />
                             <div className="w-[50%] py-5 flex flex-col gap-5 justify-between">
                                 <span className="text-2xl text-white font-semibold">
-                                    Product Longest Name
+                                    Hiwin Linear Guide
                                 </span>
                                 <Link
-                                    href="/about"
+                                    href="/products?c=Linear+Motion+Systems"
                                     className="group flex gap-2 justify-center items-center bg-white p-1.5 px-5 w-fit rounded-full **:transition-all **:duration-300"
                                 >
                                     <span className="text-black"> View Details </span>
@@ -203,10 +227,10 @@ async function Homepage() {
                             <Image className="rounded-lg h-full w-[50%]" src="/images/illustration3.jpg" width={200} height={400} alt="hero image" />
                             <div className="w-[50%] py-5 flex flex-col gap-5 justify-between">
                                 <span className="text-2xl text-white font-semibold">
-                                    Product Longest Name
+                                    Epson Robots
                                 </span>
                                 <Link
-                                    href="/about"
+                                    href="/products?c=SCARA+Robot+Models"
                                     className="group flex gap-2 justify-center items-center bg-white p-1.5 px-5 w-fit rounded-full **:transition-all **:duration-300"
                                 >
                                     <span className="text-black"> View Details </span>
@@ -218,10 +242,10 @@ async function Homepage() {
                             <Image className="rounded-lg h-full w-[50%]" src="/images/illustration3.jpg" width={200} height={400} alt="hero image" />
                             <div className="w-[50%] py-5 flex flex-col gap-5 justify-between">
                                 <span className="text-2xl text-white font-semibold">
-                                    Product Longest Name
+                                    Ball Screws
                                 </span>
                                 <Link
-                                    href="/about"
+                                    href="/products/ground-ball-screws"
                                     className="group flex gap-2 justify-center items-center bg-white p-1.5 px-5 w-fit rounded-full **:transition-all **:duration-300"
                                 >
                                     <span className="text-black"> View Details </span>
@@ -236,7 +260,7 @@ async function Homepage() {
 
             <div className="px-5 pb-24 mt-5">
                 <div className="max-w-[85rem] mx-auto flex flex-col gap-16 items-center">
-                    <h1 className="text-4xl font-medium ">Browse Products Category</h1>
+                    <h1 className="text-4xl font-medium ">Our Product Range</h1>
                     {/* <div className="flex gap-32 w-fit mb-10"> */}
                     {/*     <div className="grid grid-cols-4 gap-10 "> */}
                     {/*         <div className="flex gap-5 items-center w-full"> */}
@@ -282,7 +306,7 @@ async function Homepage() {
 
             <div className="bg-[#CAC0E3]/80 px-5 py-20">
                 <div className="max-w-[85rem] mx-auto text-white flex flex-col gap-14 justify-between items-center">
-                    <h1 className="text-4xl font-light text-center text-accent-magenta leading-12">Premium quality,<span className="text-accent-magenta/70"> with the <br /> finest materials and services</span></h1>
+                    <h1 className="text-4xl font-light text-center text-accent-magenta leading-12">The Key Reasons to Choose <span className="text-accent-magenta/70 font-normal">IBK Engineers</span><br />for Industrial Solutions</h1>
 
                     <div className="grid grid-cols-3 grid-rows-2 gap-10">
                         {features.map((feature, index) => (
@@ -290,7 +314,7 @@ async function Homepage() {
                                 key={index}
                                 className="group relative w-[23rem] h-[14rem] z-10 p-8 rounded-2xl flex flex-col justify-between bg-white/60  text-black"
                             >
-                                <span className="absolute inset-0 size-0 -z-10 group-hover:size-24 translate-1 group-hover:translate-8 group-hover:blur-2xl rounded-full bg-white transition-normal duration-700" />
+                                <span className="absolute inset-0 size-0 -z-10 group-hover:size-36 bg-white translate-1 group-hover:translate-8 group-hover:blur-2xl rounded-full transition-normal duration-700" />
                                 <div className="bg-accent-magenta/10 h-[25%] rounded-md p-2 w-fit">
                                     {feature.icon}
                                 </div>
@@ -300,7 +324,7 @@ async function Homepage() {
                                         {feature.description}
                                     </span>
                                 </div>
-                                <span className="absolute right-0 bottom-0 size-0 -z-10 group-hover:size-24 -translate-1 group-hover:-translate-8 group-hover:blur-2xl rounded-full bg-[#EFDFFC] transition-normal duration-700" />
+                                <span className="absolute right-0 bottom-0 size-0 -z-10 group-hover:size-24 -translate-1 group-hover:-translate-8 group-hover:blur-2xl rounded-full bg-[#bba3ce] transition-normal duration-700" />
                             </div>
                         ))
                         }
@@ -312,13 +336,16 @@ async function Homepage() {
             <div className=" py-20 w-screen">
                 <div className="max-w-[85rem] mx-auto px-10 flex w-full gap-5 justify-between">
                     <div className="w-1/2 py-3 flex flex-col justify-between gap-20 ">
-                        <div className="flex flex-col gap-8">
-                            <h1 className="text-5xl leading-14 font-light">Trusted Service, <span className="text-accent-gray">for your <br /> various needs</span></h1>
+                        <div className="flex flex-col gap-5">
+                            <h1 className="text-5xl leading-14 font-light">Trusted Services, <span className="text-accent-gray">For Your <br /> Industrial Needs</span></h1>
+                            <p className="text-lg">
+                                Explore our reliable sourcing and import solutions tailored to your business.
+                            </p>
                             <Link
-                                href="/about"
+                                href="/services"
                                 className="w-fit group flex gap-2 justify-center items-center bg-black text-white p-3 px-8 text-lg rounded-full **:transition-all **:duration-300"
                             >
-                                <span> Learn more about our services </span>
+                                <span> Explore </span>
                                 <ArrowUpRight className="size-0 group-hover:size-5" />
                             </Link>
                         </div>
@@ -326,17 +353,23 @@ async function Homepage() {
                             <div className="p-5 rounded-xl flex flex-col gap-3 border border-accent-gray/50 ">
                                 <h1 className="text-lg font-light text-accent-gray">01</h1>
                                 <span className="text-2xl font-light">USA imports to india</span>
-                                <Link href="" className="  w-fit text-accent-gray border-b border-b-accent-light-gray/90 hover:border-b-white">view details</Link>
+                                <Link
+                                    href="/services"
+                                    className="  w-fit text-accent-gray border-b border-b-accent-light-gray/90 hover:border-b-white">view details</Link>
                             </div>
                             <div className="p-5 rounded-xl flex flex-col gap-3 border border-accent-gray/50 ">
                                 <h1 className="text-lg font-light text-accent-gray">02</h1>
                                 <span className="text-2xl font-light">Global Imports</span>
-                                <Link href="" className="  w-fit text-accent-gray border-b border-b-accent-light-gray/90 hover:border-b-white">view details</Link>
+                                <Link
+                                    href="/services"
+                                    className="  w-fit text-accent-gray border-b border-b-accent-light-gray/90 hover:border-b-white">view details</Link>
                             </div>
                             <div className="p-5 rounded-xl flex flex-col gap-3 border border-accent-gray/50 ">
                                 <h1 className="text-lg font-light text-accent-gray">03</h1>
                                 <span className="text-2xl font-light">D2D Imports</span>
-                                <Link href="" className="  w-fit text-accent-gray border-b border-b-accent-light-gray/90 hover:border-b-white">view details</Link>
+                                <Link
+                                    href="/services"
+                                    className="  w-fit text-accent-gray border-b border-b-accent-light-gray/90 hover:border-b-white">view details</Link>
                             </div>
 
                         </div>
