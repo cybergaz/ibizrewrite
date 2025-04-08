@@ -17,6 +17,7 @@ import {
     BadgeIndianRupee,
     HeartHandshake
 } from 'lucide-react';
+import Getintouch from "@/components/other/contact-us";
 
 async function Homepage() {
     const images = [
@@ -149,11 +150,11 @@ async function Homepage() {
                             <h2 className="text-4xl sm:text-5xl">10+</h2>
                             <span className="text-sm text-accent-dark-gray">Years Of Experience</span>
                         </div>
-                        <div className="flex flex-col gap-2 items-start mb-4 sm:mb-0">
+                        <div className="flex flex-col max-sm:self-center gap-2 items-start mb-4 sm:mb-0">
                             <h2 className="text-4xl sm:text-5xl">4k+</h2>
                             <span className="text-sm text-accent-dark-gray">Happy Clients</span>
                         </div>
-                        <div className="flex flex-col gap-2 items-start">
+                        <div className="flex flex-col max-sm:self-end gap-2 items-start">
                             <h2 className="text-4xl sm:text-5xl">500+</h2>
                             <span className="text-sm text-accent-dark-gray">Products Available</span>
                         </div>
@@ -162,7 +163,7 @@ async function Homepage() {
             </div>
 
 
-            <div className="bg-accent-magenta/80 py-10 sm:py-20">
+            <div className="bg-accent-magenta py-10 sm:py-20">
                 <div className="max-w-[90rem] mx-auto px-4 sm:px-5 text-white flex flex-wrap lg:flex-row justify-center gap-6 sm:gap-14">
                     <div className="w-72 h-28 max-sm:scale-90 max-sm:w-full px-5 max-sm:px-2 flex gap-5 justify-start items-center border-accent-light-gray bg-[#82599a]/80 rounded-2xl">
                         <Image className="rounded-xl invert" src="/images/quality.svg" width={50} height={50} alt="image" />
@@ -186,7 +187,7 @@ async function Homepage() {
                 </div>
 
                 <div className="mt-10 sm:mt-20 max-w-[80rem] mx-auto px-4 sm:px-5 flex flex-col items-center justify-center w-screen gap-6 sm:gap-10">
-                    <span className="mt-5 w-full sm:w-[85%] text-2xl sm:text-4xl font-bold text-center text-white">High-Quality Industrial Equipment & Automation Solutions for Your Business</span>
+                    <span className="mt-5 w-full sm:w-[85%] text-2xl sm:text-4xl font-bold text-center text-white font-jost">High-Quality Industrial Equipment & Automation Solutions for Your Business</span>
                     <p className="text-base sm:text-lg text-center max-sm:text-justify font-light text-[#f4ebfc]">
                         IBK Engineers Pvt. Ltd. is one of the <span className="font-medium text-white">top wholesale suppliers of industrial products in India</span>, helping businesses since 2014. We deal in everything from bearings, ball screws, and linear guides to grippers, clamps, sprockets, and a whole lot more. Plus, we supply imported components from trusted global brands like Norelem, Misumi, Destaco, Carrlane, and McMaster.
                         <br className="mb-5" />
@@ -204,11 +205,11 @@ async function Homepage() {
 
             <div className="w-screen">
                 <div className="max-w-[85rem] mx-auto px-4 sm:px-5 py-10 sm:py-20 flex flex-col gap-10 sm:gap-14 justify-center items-center">
-                    <h1 className="text-3xl sm:text-4xl font-medium">Top Selling Products</h1>
+                    <h1 className="text-3xl sm:text-4xl font-medium font-jost">Top Selling Products</h1>
                     <div className="flex flex-row flex-wrap sm:flex-row justify-center gap-5 items-center">
-                        <div className="bg-accent-dark-gray/50 h-[14rem] w-full sm:w-[28rem] rounded-lg p-5 flex gap-5">
+                        <div className="bg-accent-dark-gray/60 h-[14rem] max-sm:h-[10rem] w-full sm:w-[28rem] rounded-lg p-5 flex gap-5">
                             <Image className="rounded-lg h-full w-[50%]" src="/images/pr3.jpg" width={200} height={400} alt="hero image" />
-                            <div className="w-[50%] py-5 flex flex-col gap-5 justify-between">
+                            <div className="w-[50%] py-5 max-sm:py-1 flex flex-col gap-5 justify-between">
                                 <span className="text-xl sm:text-2xl text-white font-semibold">
                                     Hiwin Linear Guide
                                 </span>
@@ -216,14 +217,14 @@ async function Homepage() {
                                     href="/products?c=Linear+Motion+Systems"
                                     className="group flex gap-2 justify-center items-center bg-white p-1.5 px-5 w-fit rounded-full **:transition-all **:duration-300"
                                 >
-                                    <span className="text-black"> View Details </span>
+                                    <span className="text-black max-sm:text-sm"> View Details </span>
                                     <ArrowUpRight className="size-0 group-hover:size-5" />
                                 </Link>
                             </div>
                         </div>
-                        <div className="bg-accent-dark-gray/50 h-[14rem] w-full sm:w-[28rem] rounded-lg p-5 flex gap-5">
+                        <div className="bg-accent-dark-gray/60 h-[14rem] max-sm:h-[10rem] w-full sm:w-[28rem] rounded-lg p-5 flex gap-5">
                             <Image className="rounded-lg h-full w-[50%]" src="/images/pr2.jpg" width={200} height={400} alt="hero image" />
-                            <div className="w-[50%] py-5 flex flex-col gap-5 justify-between">
+                            <div className="w-[50%] py-5 max-sm:py-1 flex flex-col gap-5 justify-between">
                                 <span className="text-xl sm:text-2xl text-white font-semibold">
                                     Epson Robots
                                 </span>
@@ -231,14 +232,14 @@ async function Homepage() {
                                     href="/products?c=SCARA+Robot+Models"
                                     className="group flex gap-2 justify-center items-center bg-white p-1.5 px-5 w-fit rounded-full **:transition-all **:duration-300"
                                 >
-                                    <span className="text-black"> View Details </span>
+                                    <span className="text-black max-sm:text-sm"> View Details </span>
                                     <ArrowUpRight className="size-0 group-hover:size-5" />
                                 </Link>
                             </div>
                         </div>
-                        <div className="bg-accent-dark-gray/50 h-[14rem] w-full sm:w-[28rem] rounded-lg p-5 flex gap-5">
+                        <div className="bg-accent-dark-gray/60 h-[14rem] max-sm:h-[10rem] w-full sm:w-[28rem] rounded-lg p-5 flex gap-5">
                             <Image className="rounded-lg h-full w-[50%]" src="/images/pr1.jpg" width={200} height={400} alt="hero image" />
-                            <div className="w-[50%] py-5 flex flex-col gap-5 justify-between">
+                            <div className="w-[50%] py-5 max-sm:py-1 flex flex-col gap-5 justify-between">
                                 <span className="text-xl sm:text-2xl text-white font-semibold">
                                     Ball Screws
                                 </span>
@@ -246,7 +247,7 @@ async function Homepage() {
                                     href="/products/ground-ball-screws"
                                     className="group flex gap-2 justify-center items-center bg-white p-1.5 px-5 w-fit rounded-full **:transition-all **:duration-300"
                                 >
-                                    <span className="text-black"> View Details </span>
+                                    <span className="text-black max-sm:text-sm"> View Details </span>
                                     <ArrowUpRight className="size-0 group-hover:size-5" />
                                 </Link>
                             </div>
@@ -257,53 +258,14 @@ async function Homepage() {
 
             <div className="px-4 sm:px-5 pb-12 sm:pb-24 mt-5">
                 <div className="max-w-[85rem] mx-auto flex flex-col gap-10 sm:gap-16 items-center">
-                    <h1 className="text-3xl sm:text-4xl font-medium">Our Product Range</h1>
-                    {/* <div className="flex gap-32 w-fit mb-10"> */}
-                    {/*     <div className="grid grid-cols-4 gap-10 "> */}
-                    {/*         <div className="flex gap-5 items-center w-full"> */}
-                    {/*             <Wrench className="p-2.5 size-10 rounded-full bg-white shadow-xl text-black stroke-1" /> */}
-                    {/*             <span className="text-lg">Industrial Robots</span> */}
-                    {/*         </div> */}
-                    {/*         <div className="flex gap-5 items-center w-full "> */}
-                    {/*             <Wrench className="p-2.5 size-10 rounded-full bg-white shadow-xl text-black stroke-1" /> */}
-                    {/*             <span className="text-lg">Conveyor Systems</span> */}
-                    {/*         </div> */}
-                    {/*         <div className="flex gap-5 items-center w-full "> */}
-                    {/*             <Wrench className="p-2.5 size-10 rounded-full bg-white shadow-xl text-black stroke-1" /> */}
-                    {/*             <span className="text-lg">Aluminum Profiles</span> */}
-                    {/*         </div> */}
-                    {/*         <div className="flex gap-5 items-center w-full "> */}
-                    {/*             <Wrench className="p-2.5 size-10 rounded-full bg-white shadow-xl text-black stroke-1" /> */}
-                    {/*             <span className="text-lg">Rexroth Hydraulic</span> */}
-                    {/*         </div> */}
-                    {/*         {/* </div> */}
-                    {/*         {/* <div className="flex flex-col gap-10 "> */}
-                    {/*         <div className="flex gap-5 items-center w-full "> */}
-                    {/*             <Wrench className="p-2.5 size-10 rounded-full bg-white shadow-xl text-black stroke-1" /> */}
-                    {/*             <span className="text-lg">Industrial Tools</span> */}
-                    {/*         </div> */}
-                    {/*         <div className="flex gap-5 items-center w-full "> */}
-                    {/*             <Wrench className="p-2.5 size-10 rounded-full bg-white shadow-xl text-black stroke-1" /> */}
-                    {/*             <span className="text-lg">Roller Chain</span> */}
-                    {/*         </div> */}
-                    {/*         <div className="flex gap-5 items-center w-full "> */}
-                    {/*             <Wrench className="p-2.5 size-10 rounded-full bg-white shadow-xl text-black stroke-1" /> */}
-                    {/*             <span className="text-lg">Pneumatics</span> */}
-                    {/*         </div> */}
-                    {/*         <div className="flex gap-5 items-center w-full "> */}
-                    {/*             <Wrench className="p-2.5 size-10 rounded-full bg-white shadow-xl text-black stroke-1" /> */}
-                    {/*             <span className="text-lg">Rollers</span> */}
-                    {/*         </div> */}
-                    {/*     </div> */}
-                    {/* </div> */}
-
+                    <h1 className="text-3xl sm:text-4xl font-medium font-jost">Our Product Range</h1>
                     <ProductCategory />
                 </div>
             </div>
 
             <div className="bg-[#CAC0E3]/80 px-4 sm:px-5 py-10 sm:py-20">
                 <div className="max-w-[85rem] mx-auto text-white flex flex-col gap-10 sm:gap-14 justify-between items-center">
-                    <h1 className="text-3xl sm:text-4xl font-light text-center text-accent-magenta leading-12">The Key Reasons to Choose <span className="text-accent-magenta/70 font-normal">IBK Engineers</span><br />for Industrial Solutions</h1>
+                    <h1 className="text-3xl sm:text-4xl font-jost text-center text-accent-magenta leading-12">The Key Reasons to Choose <span className="text-accent-magenta/70 font-normal">IBK Engineers</span><br />for Industrial Solutions</h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
                         {features.map((feature, index) => (
@@ -334,7 +296,7 @@ async function Homepage() {
                 <div className="max-w-[85rem] mx-auto px-4 sm:px-10 flex flex-col lg:flex-row w-full gap-10 sm:gap-5 justify-between">
                     <div className="w-full lg:w-1/2 py-3 flex flex-col justify-between gap-10 sm:gap-20">
                         <div className="flex flex-col gap-5">
-                            <h1 className="text-3xl sm:text-5xl leading-10 sm:leading-14 font-light">Trusted Services, <span className="text-accent-gray">For Your <br /> Industrial Needs</span></h1>
+                            <h1 className="text-3xl sm:text-5xl sm:leading-14 font-jost">Trusted Services, <span className="text-accent-gray">For Your <br className="max-sm:hidden" /> Industrial Needs</span></h1>
                             <p className="text-base sm:text-lg">
                                 Explore our reliable sourcing and import solutions tailored to your business.
                             </p>
@@ -381,7 +343,7 @@ async function Homepage() {
                 <BenefitsSection />
             </div>
 
-            <div className="w-screen mx-auto">
+            <div className="w-screen mx-auto px-3">
                 <FaqSection
                     title="Frequently Asked Questions"
                     description="Everything you need to know about our platform"
@@ -389,6 +351,7 @@ async function Homepage() {
                 />
             </div>
             {/* <LogoSlider className="mt-20" /> */}
+            <Getintouch />
             <LogoCarouselComp />
         </div>
     );

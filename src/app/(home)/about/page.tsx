@@ -13,6 +13,7 @@ import {
     IndianRupee,
     HeartHandshake
 } from 'lucide-react';
+import Getintouch from "@/components/other/contact-us";
 
 const features = [
     {
@@ -119,13 +120,13 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                <div className="bg-accent-magenta/70 w-screen flex justify-center items-center py-12 md:py-20">
+                <div className="bg-accent-magenta w-screen flex justify-center items-center py-12 md:py-20">
                     <div className="max-w-[85rem] mx-auto px-4 md:px-8 lg:px-32 flex flex-col gap-6 md:gap-10 justify-center items-center">
                         <h1 className="text-3xl md:text-4xl text-white font-bold">Our Goal</h1>
                         <p className="text-xl md:text-2xl font-light text-zinc-100 text-center">
                             Enable Indian industries to access global-quality components faster, smarter, and more cost-effectively—helping businesses reduce downtime, boost efficiency, and maintain production continuity.
                         </p>
-                        <div className="mt-6 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-3 w-full">
+                        <div className="flex flex-wrap justify-center gap-5 w-full max-sm:scale-90">
                             <Card h1="500+" h2="Products Available" />
                             <Card h1="4000+" h2="Happy Clients" />
                             <Card h1="10+" h2="Years of Experience" />
@@ -224,6 +225,8 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
+
+            <Getintouch />
             <LogoCarouselComp />
         </>
     )

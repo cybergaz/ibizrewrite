@@ -22,7 +22,7 @@ const ProductCategory = () => {
                     PRODUCTS.slice(0, loadItems).map((product, index) => (
                         <div
                             key={index}
-                            className="w-full h-auto min-h-[18rem] p-3 flex flex-col justify-between animate-fade-in-scale delay-500 shadow-2xl gap-2 bg-accent-light-gray/40 border border-black/5 rounded-2xl">
+                            className="w-full h-auto min-h-[18rem] max-sm:min-h-[13rem] max-sm:h-[10rem] p-3 flex flex-col justify-between animate-fade-in-scale delay-500 shadow-2xl gap-2 bg-accent-light-gray/50 border border-black/5 rounded-2xl">
                             <div className="flex h-[70%] relative justify-between gap-2">
                                 <Image className="w-[82%] rounded-xl object-cover" src={product.image} width={200} height={400} alt="hero image" />
                                 <Popover>
@@ -57,7 +57,7 @@ const ProductCategory = () => {
                                     href={`/products?c=${product.category.replace(/\s+/g, '+')}`}
                                     className="absolute overflow-hidden right-0 top-0 group"
                                 >
-                                    <button className="p-1 pl-4 mt-1 group hover:cursor-pointer flex gap-2 justify-center items-center hover:bg-black/20 hover:backdrop-blur-xs text-white text-base sm:text-lg rounded-full transition-all duration-500 **:transition-all **:duration-500" >
+                                    <button className="p-1 pl-4 group hover:cursor-pointer flex gap-2 justify-center items-center hover:bg-black/20 hover:backdrop-blur-xs text-white text-base sm:text-lg rounded-full transition-all duration-500 **:transition-all **:duration-500" >
                                         <span className="translate-x-52 z-10 group-hover:translate-x-0"> Explore Category </span>
                                         <ArrowUpRight className="size-7 sm:size-9 z-20 text-black group-hover:text-white rounded-full p-1.5 sm:p-2 bg-white/50 group-hover:bg-black/20 border border-transparent group-hover:border-black/50 group-hover:cursor-pointer" />
                                     </button>

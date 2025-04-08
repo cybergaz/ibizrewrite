@@ -21,8 +21,8 @@ const allLogos = [
 
 export function LogoCarouselComp() {
     return (
-        <div className="py-20 bg-accent-magenta/0">
-            <div className=" max-w-[85rem] mx-auto bg-accent-magenta/[8%] border border-accent-magenta/10 shadow-2xl rounded-3xl py-10 flex w-full flex-col items-center space-y-16">
+        <div className="py-5 pb-10 bg-accent-dark-gray/30">
+            <div className=" max-w-[85rem] mx-auto rounded-3xl py-10 flex w-full flex-col items-center space-y-16">
                 <div className="text-center">
                     <h1 className="text-4xl font-medium">
                         Our Clients

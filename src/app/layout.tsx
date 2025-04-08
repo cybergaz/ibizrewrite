@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Inter, Bodoni_Moda, Ibarra_Real_Nova, Atkinson_Hyperlegible } from 'next/font/google'
+import { Jost, Inter, Bodoni_Moda, Ibarra_Real_Nova, Atkinson_Hyperlegible } from 'next/font/google'
 
-const ibarra = Ibarra_Real_Nova({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '700'],
-    variable: '--font-ibarra'
-})
 
-const bodoni = Bodoni_Moda({
+const jost = Jost({
     subsets: ['latin'],
-    weight: ['400', '500', '600', '700', '800', '900'],
-    variable: '--font-bodoni'
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    variable: '--font-jost'
 })
 
 const inter = Inter({
@@ -34,7 +29,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${inter.variable} ${inter.className} ${bodoni.variable} ${ibarra.variable} antialiased`}
+                className={`${inter.variable} ${inter.className} ${jost.variable} antialiased`}
             >
                 {children}
             </body>

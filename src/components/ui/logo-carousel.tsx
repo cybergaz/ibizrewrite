@@ -49,8 +49,8 @@ const distributeLogos = (allLogos: Logo[], columnCount: number): Logo[][] => {
 
 const LogoColumn: React.FC<LogoColumnProps> = React.memo(
     ({ logos, index, currentTime }) => {
-        const cycleInterval = 2000
-        const columnDelay = index * 200
+        const cycleInterval = 4000
+        const columnDelay = index * 100
         const adjustedTime = (currentTime + columnDelay) % (cycleInterval * logos.length)
         const currentIndex = Math.floor(adjustedTime / cycleInterval)
         const currentLogo = useMemo(() => logos[currentIndex], [logos, currentIndex])
@@ -112,9 +112,34 @@ interface LogoCarouselProps {
     logos: Logo[]
 }
 
+const useMediaQuery = (query: string) => {
+    const [matches, setMatches] = useState(false)
+
+    useEffect(() => {
+        const media = window.matchMedia(query)
+        if (media.matches !== matches) {
+            setMatches(media.matches)
+        }
+        const listener = () => setMatches(media.matches)
+        media.addEventListener("change", listener)
+        return () => media.removeEventListener("change", listener)
+    }, [matches, query])
+
+    return matches
+}
+
 export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
     const [logoSets, setLogoSets] = useState<Logo[][]>([])
     const [currentTime, setCurrentTime] = useState(0)
+    
+    const isMobile = useMediaQuery("(max-width: 640px)")
+    const isTablet = useMediaQuery("(max-width: 1024px)")
+    
+    const responsiveColumnCount = useMemo(() => {
+        if (isMobile) return 3
+        if (isTablet) return 5
+        return columnCount
+    }, [isMobile, isTablet, columnCount])
 
     const updateTime = useCallback(() => {
         setCurrentTime((prevTime) => prevTime + 100)
@@ -126,12 +151,12 @@ export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
     }, [updateTime])
 
     useEffect(() => {
-        const distributedLogos = distributeLogos(logos, columnCount)
+        const distributedLogos = distributeLogos(logos, responsiveColumnCount)
         setLogoSets(distributedLogos)
-    }, [logos, columnCount])
+    }, [logos, responsiveColumnCount])
 
     return (
-        <div className="flex space-x-4">
+        <div className={`flex ${isMobile ? 'space-x-2' : 'space-x-4'}`}>
             {logoSets.map((logos, index) => (
                 <LogoColumn
                     key={index}

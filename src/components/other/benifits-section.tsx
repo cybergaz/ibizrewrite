@@ -51,18 +51,18 @@ export default function BenefitsSection() {
     ]
 
     return (
-        <section className="bg-[#CAC0E3]/60 border py-16 px-20 rounded-3xl">
+        <section className="bg-[#CAC0E3]/60 border py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 lg:px-20 rounded-3xl max-sm:rounded-none">
             <div className="max-w-6xl mx-auto">
                 <div
-                    className={`text-center mb-16 transition-all duration-700 opacity-100 translate-y-0`}
+                    className={`text-center mb-8 sm:mb-12 md:mb-16 transition-all duration-700 opacity-100 translate-y-0`}
                 >
-                    <h2 className="text-4xl font-medium text-gray-900 mb-4">Our Key Advantages</h2>
-                    <p className="text-gray-500 max-w-2xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl font-medium font-jost mb-3 sm:mb-4">Our Key Advantages</h2>
+                    <p className="text-gray-600 max-w-2xl mx-auto px-4">
                         Quality, Efficiency, and Lasting Partnerships
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                     {benefits.map((benefit, index) => (
                         <BenefitCard
                             key={index}
