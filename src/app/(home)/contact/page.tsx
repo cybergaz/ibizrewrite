@@ -5,6 +5,35 @@ import { User, Mail, Phone } from "lucide-react"
 import { submitContactForm, type ContactFormData } from "@/lib/actions"
 import Image from "next/image"
 
+// Add structured data for better SEO
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact IBK Engineers",
+    "description": "Contact IBK Engineers for industrial products, automation solutions, and engineering components",
+    "url": "https://ibizkart.com/contact",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "IBK Engineers",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-8048890627",
+            "contactType": "customer service",
+            "email": "ibksales@ibizkart.com",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4th Cross Rd, Peenya 1st Stage, Netaji Nagar, Peenya",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560058",
+            "addressCountry": "IN"
+        }
+    }
+};
+
 export default function ContactForm() {
     const [formData, setFormData] = useState<ContactFormData>({
         firstName: "",
@@ -58,51 +87,65 @@ export default function ContactForm() {
     }
 
     return (
-        <div className="flex flex-col gap-10 md:gap-20 mt-8 md:mt-16 overflow-hidden">
-            <Image className="fixed inset-0 -mt-20 w-screen -z-10 bg-contain" src="/images/illustration.jpg" alt="Contact Us" width={1920} height={1080} />
+        <div className="flex flex-col gap-10 md:gap-20 mt-8 md:mt-16 overflow-hidden" role="main">
+            <Image 
+                className="fixed inset-0 -mt-20 w-screen -z-10 bg-contain" 
+                src="/images/illustration.jpg" 
+                alt="Decorative background pattern" 
+                width={1920} 
+                height={1080}
+                aria-hidden="true"
+            />
             <div className="max-w-[85rem] flex flex-col md:flex-row mx-auto border border-accent-magenta/30 rounded-2xl">
                 {/* Left Section with Illustration */}
                 <div className="relative w-full md:w-md flex justify-start items-end rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
-                    <Image className="absolute h-full w-full inset-0 -z-10 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none blur-[2px]" src="/images/contact_banner.jpg" alt="Contact Us" width={500} height={1080} />
+                    <Image 
+                        className="absolute h-full w-full inset-0 -z-10 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none blur-[2px]" 
+                        src="/images/contact_banner.jpg" 
+                        alt="Contact Us Banner" 
+                        width={500} 
+                        height={1080}
+                        priority
+                    />
                     <div className="z-10 p-6 md:p-10 flex flex-col gap-2">
                         <h1 className="text-xl md:text-2xl font-bold">CONTACT US</h1>
                         <p className="text-xs md:textsm text-gray-700">
                             Email, call, or complete the form if you have any questions or
                             would like to learn more about our products.
                         </p>
-                        <div className="space-y-2 md:space-y-3 text-xs md:text-sm mt-3">
+                        <div className="space-y-2 md:space-y-3 text-xs md:text-sm mt-3" role="contentinfo" aria-label="Contact information">
                             <div className="flex items-center gap-2 text-gray-700">
-                                <Mail className="h-3 w-3 md:h-4 md:w-4" />
-                                <a href="mailto:ibksales@ibizkart.com" className="hover:underline">
+                                <Mail className="h-3 w-3 md:h-4 md:w-4" aria-hidden="true" />
+                                <a href="mailto:ibksales@ibizkart.com" className="hover:underline" aria-label="Send us an email">
                                     ibksales@ibizkart.com
                                 </a>
                             </div>
 
                             <div className="flex items-center gap-2 text-gray-700">
-                                <Phone className="h-3 w-3 md:h-4 md:w-4" />
-                                <a href="tel:+918048890627" className="hover:underline">
+                                <Phone className="h-3 w-3 md:h-4 md:w-4" aria-hidden="true" />
+                                <a href="tel:+918048890627" className="hover:underline" aria-label="Call us">
                                     +91 8048890627
                                 </a>
                             </div>
-                            <div className="w-fit flex gap-2 md:gap-3 mt-3 md:mt-5">
+                            <div className="w-fit flex gap-2 md:gap-3 mt-3 md:mt-5" role="list" aria-label="Social media links">
                                 <div className="group transition-all duration-300 text-gray-900 p-1.5 md:p-2 rounded-full flex justify-center items-center bg-accent-magenta/10 hover:bg-accent-magenta/60 hover:cursor-pointer">
-                                    <a href="https://wa.me/919880566644" >
-                                        <Image className="group-hover:invert transition-all duration-300" src="/images/socials/whatsapp.svg" alt="whatsapp svg" width={16} height={16} />
+                                    <a href="https://wa.me/919880566644" aria-label="Contact us on WhatsApp">
+                                        <Image className="group-hover:invert transition-all duration-300" src="/images/socials/whatsapp.svg" alt="WhatsApp icon" width={16} height={16} />
                                     </a>
                                 </div>
                                 <div className="group transition-all duration-300 text-gray-900 p-1.5 md:p-2 rounded-full flex justify-center items-center bg-accent-magenta/10 hover:bg-accent-magenta/60 hover:cursor-pointer">
-                                    <a href="https://wa.me/919880566644" >
-                                        <Image className="group-hover:invert transition-all duration-300" src="/images/socials/facebook.svg" alt="whatsapp svg" width={16} height={16} />
+                                    <a href="https://facebook.com/ibizkart.In" aria-label="Follow us on Facebook">
+                                        <Image className="group-hover:invert transition-all duration-300" src="/images/socials/facebook.svg" alt="Facebook icon" width={16} height={16} />
                                     </a>
                                 </div>
                                 <div className="group transition-all duration-300 text-gray-900 p-1.5 md:p-2 rounded-full flex justify-center items-center bg-accent-magenta/10 hover:bg-accent-magenta/60 hover:cursor-pointer">
-                                    <a href="https://wa.me/919880566644" >
-                                        <Image className="group-hover:invert transition-all duration-300" src="/images/socials/twitter.svg" alt="whatsapp svg" width={16} height={16} />
+                                    <a href="https://twitter.com/ibizkart" aria-label="Follow us on Twitter">
+                                        <Image className="group-hover:invert transition-all duration-300" src="/images/socials/twitter.svg" alt="Twitter icon" width={16} height={16} />
                                     </a>
                                 </div>
                                 <div className="group transition-all duration-300 text-gray-900 p-1.5 md:p-2 rounded-full flex justify-center items-center bg-accent-magenta/10 hover:bg-accent-magenta/60 hover:cursor-pointer">
-                                    <a href="https://wa.me/919880566644" >
-                                        <Image className="group-hover:invert transition-all duration-300" src="/images/socials/linkedin.svg" alt="whatsapp svg" width={16} height={16} />
+                                    <a href="https://linkedin.com/company/ibizkart" aria-label="Follow us on LinkedIn">
+                                        <Image className="group-hover:invert transition-all duration-300" src="/images/socials/linkedin.svg" alt="LinkedIn icon" width={16} height={16} />
                                     </a>
                                 </div>
                             </div>
@@ -119,18 +162,22 @@ export default function ContactForm() {
                         {formStatus && (
                             <div
                                 className={`mb-4 md:mb-6 p-3 md:p-4 rounded-md text-sm ${formStatus.success ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800"}`}
+                                role="alert"
+                                aria-live="polite"
                             >
                                 {formStatus.message}
                             </div>
                         )}
 
-                        <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+                        <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4" aria-label="Contact form">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                                 <div className="relative">
+                                    <label htmlFor="firstName" className="sr-only">First Name</label>
                                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                        <User className="h-4 w-4 md:h-5 md:w-5 text-gray-400" />
+                                        <User className="h-4 w-4 md:h-5 md:w-5 text-gray-400" aria-hidden="true" />
                                     </div>
                                     <input
+                                        id="firstName"
                                         type="text"
                                         name="firstName"
                                         placeholder="First Name"
@@ -138,11 +185,14 @@ export default function ContactForm() {
                                         onChange={handleChange}
                                         className="text-xs md:text-sm text-gray-600 pl-9 md:pl-10 w-full border border-gray-400 rounded-full py-2.5 md:py-3 px-4 focus:outline-none focus:ring-2 focus:ring-accent-magenta/60 focus:border-transparent"
                                         required
+                                        aria-required="true"
                                     />
                                 </div>
 
                                 <div className="relative">
+                                    <label htmlFor="lastName" className="sr-only">Last Name</label>
                                     <input
+                                        id="lastName"
                                         type="text"
                                         name="lastName"
                                         placeholder="Last Name"
@@ -154,10 +204,12 @@ export default function ContactForm() {
                             </div>
 
                             <div className="relative">
+                                <label htmlFor="email" className="sr-only">Email</label>
                                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <Mail className="h-4 w-4 md:h-5 md:w-5 text-gray-400" />
+                                    <Mail className="h-4 w-4 md:h-5 md:w-5 text-gray-400" aria-hidden="true" />
                                 </div>
                                 <input
+                                    id="email"
                                     type="email"
                                     name="email"
                                     placeholder="Email"
@@ -165,14 +217,17 @@ export default function ContactForm() {
                                     onChange={handleChange}
                                     className="text-xs md:text-sm text-gray-600 pl-9 md:pl-10 w-full border border-gray-400 rounded-full py-2.5 md:py-3 px-4 focus:outline-none focus:ring-2 focus:ring-accent-magenta/60 focus:border-transparent"
                                     required
+                                    aria-required="true"
                                 />
                             </div>
 
                             <div className="relative">
+                                <label htmlFor="phone" className="sr-only">Phone</label>
                                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <Phone className="h-4 w-4 md:h-5 md:w-5 text-gray-400" />
+                                    <Phone className="h-4 w-4 md:h-5 md:w-5 text-gray-400" aria-hidden="true" />
                                 </div>
                                 <input
+                                    id="phone"
                                     type="tel"
                                     name="phone"
                                     placeholder="Phone"
@@ -183,7 +238,9 @@ export default function ContactForm() {
                             </div>
 
                             <div>
+                                <label htmlFor="message" className="sr-only">Message</label>
                                 <textarea
+                                    id="message"
                                     name="message"
                                     placeholder="Describe your query"
                                     value={formData.message}
@@ -191,6 +248,7 @@ export default function ContactForm() {
                                     rows={4}
                                     className="text-xs md:text-sm text-gray-600 w-full border border-gray-400 rounded-2xl py-2.5 md:py-3 px-4 focus:outline-none focus:ring-2 focus:ring-accent-magenta/60 focus:border-transparent"
                                     required
+                                    aria-required="true"
                                 ></textarea>
                             </div>
 
@@ -198,6 +256,7 @@ export default function ContactForm() {
                                 type="submit"
                                 className="w-full bg-accent-magenta/80 hover:bg-accent-magenta/60 text-white text-sm md:text-base font-medium py-2.5 md:py-3 px-4 rounded-full flex items-center justify-center transition-colors"
                                 disabled={isSubmitting}
+                                aria-busy={isSubmitting}
                             >
                                 {isSubmitting ? (
                                     <span className="flex items-center">
@@ -206,6 +265,7 @@ export default function ContactForm() {
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"
+                                            aria-hidden="true"
                                         >
                                             <circle
                                                 className="opacity-25"
@@ -241,13 +301,15 @@ export default function ContactForm() {
                             height="300"
                             loading="lazy"
                             style={{ borderRadius: "1rem" }}
+                            title="IBK Engineers Location Map"
+                            aria-label="Map showing IBK Engineers location in Bangalore"
                         />
                     </div>
                     <div className="w-full md:w-1/2 md:pl-10 flex flex-col justify-center gap-3 md:gap-4">
-                        <h1 className="text-lg md:text-xl text-accent-dark-gray">Our Location</h1>
-                        <h1 className="text-2xl md:text-4xl font-semibold">Connecting Near and Far</h1>
+                        <h2 className="text-lg md:text-xl text-accent-dark-gray">Our Location</h2>
+                        <h3 className="text-2xl md:text-4xl font-semibold">Connecting Near and Far</h3>
                         <span className="text-lg md:text-xl font-semibold mt-6 md:mt-10">Headquarters</span>
-                        <span className="text-sm md:text-base text-accent-dark-gray">
+                        <address className="text-sm md:text-base text-accent-dark-gray not-italic">
                             IBK Engineers Pvt Ltd
                             <br />
                             4th Cross Rd, Peenya 1st Stage,
@@ -257,10 +319,15 @@ export default function ContactForm() {
                             Bengaluru, Karnataka 560058,
                             <br />
                             India
-                        </span>
+                        </address>
                     </div>
                 </div>
             </div>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
         </div>
     )
 }

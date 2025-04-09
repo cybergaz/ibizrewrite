@@ -25,22 +25,22 @@ export const metadata: Metadata = {
 
 const features = [
     {
-        icon: <Warehouse className="text-accent-magenta" />,
+        icon: <Warehouse className="text-accent-magenta" aria-hidden="true" />,
         title: "Comprehensive Industrial Marketplace",
         description: "Your complete sourcing solution - from precision bearings and fasteners to advanced robotics and CNC control systems."
     },
     {
-        icon: <BadgeCheck className="text-accent-magenta" />,
+        icon: <BadgeCheck className="text-accent-magenta" aria-hidden="true" />,
         title: "Certified Global Partnerships",
         description: "Genuine components from industry leaders including SKF, FESTO, BOSCH, PANASONIC, EPSON, and HIWIN."
     },
     {
-        icon: <Cpu className="text-accent-dark-gray" />,
+        icon: <Cpu className="text-accent-dark-gray" aria-hidden="true" />,
         title: "Technical Solutions Partnership",
         description: "Dedicated engineering support for automation integration, production optimization, and turnkey assembly solutions."
     },
     {
-        icon: <Truck className="text-accent-dark-gray" />,
+        icon: <Truck className="text-accent-dark-gray" aria-hidden="true" />,
         title: "Nationwide Distribution Network",
         description: "Timely logistics with guaranteed delivery timelines to all industrial hubs across India."
     },
@@ -97,12 +97,25 @@ const AboutPage = () => {
     ];
 
     return (
-        <>
+        <main role="main">
             <div className="w-screen mx-auto mt-20 flex flex-col gap-16 md:gap-32 justify-center items-start">
-                <Image className="object-cover fixed inset-0 w-screen h-screen blur-xs -z-10" src="/images/about_page_bg_blurred.jpg" alt="about page header image" width={1920} height={1080} />
-                <div className="max-w-[85rem] px-4 md:px-5 mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-10">
+                <Image 
+                    className="object-cover fixed inset-0 w-screen h-screen blur-xs -z-10" 
+                    src="/images/about_page_bg_blurred.jpg" 
+                    alt="Decorative background image" 
+                    width={1920} 
+                    height={1080}
+                    aria-hidden="true"
+                />
+                <section className="max-w-[85rem] px-4 md:px-5 mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-10">
                     <div className="w-full md:w-auto">
-                        <Image className="aspect-3/2 object-cover rounded-3xl w-full" src="/images/pexels-photo-7178310.jpeg" alt="about page header image" width={600} height={400} />
+                        <Image 
+                            className="aspect-3/2 object-cover rounded-3xl w-full" 
+                            src="/images/pexels-photo-7178310.jpeg" 
+                            alt="Industrial equipment and machinery in a modern facility" 
+                            width={600} 
+                            height={400} 
+                        />
                     </div>
                     <div className="flex flex-col w-full md:w-1/2 gap-6 md:gap-10 justify-center">
                         <h1 className="text-3xl md:text-5xl tracking-wide leading-tight md:leading-16 font-semibold">
@@ -115,128 +128,150 @@ const AboutPage = () => {
                             <Link
                                 href="/products"
                                 className="text-accent-magenta font-medium bg-accent-magenta/10 hover:bg-accent-magenta/5 hover:scale-95 transition-all duration-500 w-full sm:w-fit p-2 px-10 rounded-lg flex justify-center items-center"
+                                aria-label="Browse our products"
                             >
                                 Our Products
                             </Link>
                             <Link
                                 href="/contact"
                                 className="border border-accent-magenta/15 text-accent-magenta font-medium transition-all duration-500 w-full sm:w-fit p-2 px-8 rounded-lg gap-2 hover:gap-3.5 flex justify-center items-center"
+                                aria-label="Contact us for more information"
                             >
-                                Get In Touch <ArrowRight size={18} />
+                                Get In Touch <ArrowRight size={18} aria-hidden="true" />
                             </Link>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className="bg-accent-magenta w-screen flex justify-center items-center py-12 md:py-14 md:pb-20">
+                <section className="bg-accent-magenta w-screen flex justify-center items-center py-12 md:py-14 md:pb-20" aria-labelledby="our-goal-heading">
                     <div className="max-w-[85rem] mx-auto px-4 md:px-8 lg:px-32 flex flex-col gap-6 md:gap-10 justify-center items-center">
-                        <h1 className="text-3xl md:text-4xl text-white font-bold font-jost">Our Goal</h1>
+                        <h2 id="our-goal-heading" className="text-3xl md:text-4xl text-white font-bold font-jost">Our Goal</h2>
                         <p className="text-xl md:text-2xl font-light text-zinc-100 text-center">
                             Enable Indian industries to access global-quality components faster, smarter, and more cost-effectively—helping businesses reduce downtime, boost efficiency, and maintain production continuity.
                         </p>
-                        <div className="flex flex-wrap justify-center gap-5 w-full max-sm:scale-90">
+                        <div className="flex flex-wrap justify-center gap-5 w-full max-sm:scale-90" role="list">
                             <Card h1="500+" h2="Products Available" />
                             <Card h1="4000+" h2="Happy Clients" />
                             <Card h1="10+" h2="Years of Experience" />
                             <Card h1="200+" h2="Industry Experts" />
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className="max-w-[85rem] px-4 md:px-5 mx-auto flex flex-col gap-12 md:gap-20">
+                <section className="max-w-[85rem] px-4 md:px-5 mx-auto flex flex-col gap-12 md:gap-20">
                     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-14 w-full">
                         <div className="w-full md:w-1/2 order-2 md:order-1">
-                            <Image className="aspect-3/2 rounded-3xl w-full" src="/images/header_img.png" alt="about us image" width={600} height={500} />
+                            <Image 
+                                className="aspect-3/2 rounded-3xl w-full" 
+                                src="/images/header_img.png" 
+                                alt="Modern industrial facility with advanced machinery" 
+                                width={600} 
+                                height={500} 
+                            />
                         </div>
                         <div className="w-full md:w-1/2 order-1 md:order-2 flex flex-col flex-wrap gap-4 md:gap-5 mt-0 md:mt-10">
-                            <h1 className="text-3xl md:text-4xl font-semibold text-accent-magenta">Who We Are?</h1>
+                            <h2 className="text-3xl md:text-4xl font-semibold text-accent-magenta">Who We Are?</h2>
                             <p className="text-accent-dark-gray">
                                 Since 2014, IBK Engineers Pvt. Ltd. has been a trusted partner in wholesaling, supplying, and trading industrial components. Based in Bengaluru, Karnataka, the company delivers high-quality bearings, linear guides, ball screws, roller chains, clamps, and specialized imported parts from top global brands
                             </p>
-                            <div className="mt-3 flex flex-col gap-4 md:gap-5">
-                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Comprehensive Product Range </p>
-                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Global Brand Partnerships </p>
-                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Customer-Centric Approach </p>
+                            <div className="mt-3 flex flex-col gap-4 md:gap-5" role="list">
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Comprehensive Product Range </p>
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Global Brand Partnerships </p>
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Customer-Centric Approach </p>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-14 w-full">
                         <div className="w-full md:w-1/2 order-2">
-                            <Image className="aspect-3/2 rounded-3xl w-full" src="/images/pexels-photo-24739784.webp" alt="about us image" width={600} height={500} />
+                            <Image 
+                                className="aspect-3/2 rounded-3xl w-full" 
+                                src="/images/pexels-photo-24739784.webp" 
+                                alt="Quality control inspection of industrial components" 
+                                width={600} 
+                                height={500} 
+                            />
                         </div>
                         <div className="w-full md:w-1/2 order-1 flex flex-col flex-wrap gap-4 md:gap-5 mt-0 md:mt-10">
-                            <h1 className="text-3xl md:text-4xl font-semibold text-accent-magenta">Our Commitment To Quality</h1>
+                            <h2 className="text-3xl md:text-4xl font-semibold text-accent-magenta">Our Commitment To Quality</h2>
                             <p className="text-accent-dark-gray">
                                 Ibk Engineers delivers only genuine, brand-certified industrial products from trusted global manufacturers. Every item undergoes strict quality checks to ensure high performance, long-term durability, and compliance with international standards across automation, mechanical, electrical, and tooling categories.
                             </p>
-                            <div className="mt-3 flex flex-col gap-4 md:gap-5">
-                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Industry-Leading Standards </p>
-                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Advanced Technology </p>
-                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Trusted Supplier Network </p>
+                            <div className="mt-3 flex flex-col gap-4 md:gap-5" role="list">
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Industry-Leading Standards </p>
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Advanced Technology </p>
+                                <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Trusted Supplier Network </p>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-14 w-full">
                         <div className="w-full md:w-1/2 order-2 md:order-1">
-                            <Image className="aspect-3/2 rounded-3xl w-full" src="/images/pexels-photo-11294358.webp" alt="about us image" width={600} height={500} />
+                            <Image 
+                                className="aspect-3/2 rounded-3xl w-full" 
+                                src="/images/pexels-photo-11294358.webp" 
+                                alt="Industrial automation and robotics solutions" 
+                                width={600} 
+                                height={500} 
+                            />
                         </div>
                         <div className="w-full md:w-1/2 order-1 md:order-2 flex flex-col flex-wrap gap-4 md:gap-5 mt-0 md:mt-5">
-                            <h1 className="text-3xl md:text-4xl font-semibold text-accent-magenta">What We Offer?</h1>
+                            <h2 className="text-3xl md:text-4xl font-semibold text-accent-magenta">What We Offer?</h2>
                             <div className="text-accent-dark-gray">
                                 Ibk Engineers is your one-stop destination for a comprehensive range of industrial products and automation solutions.
-                                <div className="mt-3 flex flex-col gap-4 md:gap-5">
-                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Mechanical & Structural Solutions </p>
-                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Motion & Transmission Systems </p>
-                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Robotics & Automation </p>
-                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Electrical & Control Systems </p>
-                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Power Tools & Hand Tools </p>
-                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" /> Custom Sourcing & Global Procurement </p>
+                                <div className="mt-3 flex flex-col gap-4 md:gap-5" role="list">
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Mechanical & Structural Solutions </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Motion & Transmission Systems </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Robotics & Automation </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Electrical & Control Systems </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Power Tools & Hand Tools </p>
+                                    <p className="flex gap-3 md:gap-5 text-accent-magenta"> <CircleCheckBig color="#a066de" aria-hidden="true" /> Custom Sourcing & Global Procurement </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className="bg-accent-magenta/70 from-accent-dark-gray to-accent-magenta/90 w-screen py-16 md:py-24">
+                <section className="bg-accent-magenta/70 from-accent-dark-gray to-accent-magenta/90 w-screen py-16 md:py-24" aria-labelledby="why-choose-heading">
                     <div className="max-w-[80rem] mx-auto px-4 md:px-5 relative flex flex-col items-center gap-10 md:gap-16">
                         <div className="text-center">
-                            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 md:mb-4">Why Choose IBK Engineers</h1>
+                            <h2 id="why-choose-heading" className="text-3xl md:text-4xl font-bold text-white mb-2 md:mb-4">Why Choose IBK Engineers</h2>
                             <p className="text-gray-200 max-w-2xl mx-auto text-lg md:text-xl">as a Top Supplier of Industrial Equipment in India?</p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 w-full">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 w-full" role="list">
                             {features.map((item, index) =>
                                 <div
                                     key={index}
-                                    className="group relative z-10 p-6 md:p-8 rounded-2xl flex flex-col gap-4 md:gap-5 justify-between bg-white/70 text-black" >
-                                    <span className="absolute inset-0 size-0 -z-10 group-hover:size-24 translate-1 group-hover:translate-8 group-hover:blur-2xl rounded-full bg-white transition-normal duration-700" />
+                                    className="group relative z-10 p-6 md:p-8 rounded-2xl flex flex-col gap-4 md:gap-5 justify-between bg-white/70 text-black"
+                                    role="listitem"
+                                >
+                                    <span className="absolute inset-0 size-0 -z-10 group-hover:size-24 translate-1 group-hover:translate-8 group-hover:blur-2xl rounded-full bg-white transition-normal duration-700" aria-hidden="true" />
                                     <div className="flex items-center gap-3 md:gap-4">
                                         <div className="p-1.5 rounded-lg bg-accent-magenta/10">
                                             {item.icon}
                                         </div>
-                                        <h2 className="text-base md:text-lg font-bold text-accent-dark-gray">{item.title}</h2>
+                                        <h3 className="text-base md:text-lg font-bold text-accent-dark-gray">{item.title}</h3>
                                     </div>
                                     <p className="text-accent-gray text-sm md:text-base">{item.description}</p>
-                                    <span className="absolute right-0 bottom-0 size-0 -z-10 group-hover:size-24 -translate-1 group-hover:-translate-8 group-hover:blur-2xl rounded-full bg-[#EFDFFC] transition-normal duration-700" />
+                                    <span className="absolute right-0 bottom-0 size-0 -z-10 group-hover:size-24 -translate-1 group-hover:-translate-8 group-hover:blur-2xl rounded-full bg-[#EFDFFC] transition-normal duration-700" aria-hidden="true" />
                                 </div>
                             )}
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className="w-screen max-w-[85rem] mx-auto px-4 md:px-5 mb-12 md:mb-20">
+                <section className="w-screen max-w-[85rem] mx-auto px-4 md:px-5 mb-12 md:mb-20" aria-labelledby="testimonials-heading">
                     <div className="flex flex-col justify-center items-center gap-6 md:gap-8">
-                        <h1 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-accent-magenta">What Our Customers Say?</h1>
+                        <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-accent-magenta">What Our Customers Say?</h2>
                         <AnimatedTestimonials testimonials={testimonials} />
                     </div>
-                </div>
+                </section>
             </div>
 
             <Getintouch />
             <LogoCarouselComp />
-        </>
+        </main>
     )
 }
 
