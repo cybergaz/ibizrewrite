@@ -79,7 +79,7 @@ const FaqItem = React.forwardRef<
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: index * 0.1 }}
             className={cn(
-                "group rounded-lg bg-accent-magenta/10",
+                "group rounded-lg ",
                 "transition-all duration-200 ease-in-out",
                 "border border-border/50",
                 isOpen
@@ -87,21 +87,21 @@ const FaqItem = React.forwardRef<
                     : "hover:bg-muted/50"
             )}
         >
-            <Button
-                variant="ghost"
+            <div
+                // variant="ghost"
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full px-6 py-4 h-auto justify-between bg-white/30 hover:bg-transparent"
+                className="w-full flex items-start px-6 py-4 h-auto justify-between bg-white/30 hover:bg-transparent"
             >
-                <h3
+                <span
                     className={cn(
-                        "text-base font-medium transition-colors duration-200 text-left",
+                        "text-base max-sm:text-sm font-medium transition-colors duration-200",
                         "text-foreground/70",
                         isOpen && "text-foreground"
                     )}
                 >
                     {question}
-                </h3>
-                <motion.div
+                </span>
+                <motion.span
                     animate={{
                         rotate: isOpen ? 180 : 0,
                         scale: isOpen ? 1.1 : 1,
@@ -114,8 +114,8 @@ const FaqItem = React.forwardRef<
                     )}
                 >
                     <ChevronDown className="h-4 w-4" />
-                </motion.div>
-            </Button>
+                </motion.span>
+            </div>
             <AnimatePresence initial={false}>
                 {isOpen && (
                     <motion.div
