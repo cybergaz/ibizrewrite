@@ -1,6 +1,7 @@
 "use server"
 
 import { z } from "zod"
+import { sendContactEmail, type ContactFormData } from './email';
 
 // Form validation schema
 const ContactFormSchema = z.object({
@@ -12,35 +13,19 @@ const ContactFormSchema = z.object({
     message: z.string().min(1, "Message is required").max(120, "Message is too long"),
 })
 
-export type ContactFormData = z.infer<typeof ContactFormSchema>
+// Use the imported ContactFormData type
+export { ContactFormData };
 
-export async function submitContactForm(formData: ContactFormData) {
+export async function submitContactForm(data: ContactFormData) {
     try {
-        // Validate form data
-        const validatedData = ContactFormSchema.parse(formData)
-
-        // Here you would typically:
-        // 1. Save to database
-        // 2. Send email notification
-        // 3. Log the contact request
-
-        console.log("Form submitted:", validatedData)
-
-        // Simulate API delay
-        await new Promise((resolve) => setTimeout(resolve, 1000))
-
-        return { success: true, message: "Thank you for your message. We'll get back to you soon!" }
+        const result = await sendContactEmail(data);
+        return result;
     } catch (error) {
-        console.error("Form submission error:", error)
-        if (error instanceof z.ZodError) {
-            return {
-                success: false,
-                message: "Please check your information and try again.",
-                errors: error.errors,
-            }
-        }
-
-        return { success: false, message: "Something went wrong. Please try again later." }
+        console.error('Error in submitContactForm:', error);
+        return {
+            success: false,
+            message: 'An unexpected error occurred. Please try again later.',
+        };
     }
 }
 

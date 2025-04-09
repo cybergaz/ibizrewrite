@@ -125,13 +125,13 @@ async function Homepage() {
                             <div className="h-[35%] animate-fade-in-scale w-full sm:w-[18rem] p-5 shadow-2xl text-lg flex justify-center items-center bg-accent-light-gray/25 border border-black/5 rounded-2xl">
                                 10+ Years of Dedicated Service
                             </div>
-                            <Image className="animate-fade-in-scale delay-700 w-full sm:w-[18rem] h-[65%] rounded-xl self-end" src="/images/header_img.png" width={200} height={200} alt="hero image" placeholder="empty" />
+                            <Image className="animate-fade-in-scale delay-700 w-full sm:w-[18rem] h-[65%] rounded-xl self-end object-cover" src="/images/pexels-photo-10664320.jpeg" width={200} height={200} alt="hero image" placeholder="empty" />
                             {/* <Image className="w-[19rem] h-[8rem] rounded-xl self-end" src="/images/pexels-photo-24739784.webp" width={200} height={400} alt="hero image" /> */}
                         </div>
                         <div className="flex flex-col justify-between animate-fade-in-scale delay-500 shadow-2xl gap-2 bg-accent-light-gray/25 border border-black/5 **:text-black rounded-2xl w-full sm:w-72 h-[19rem] p-3 ">
                             <div className="flex justify-between gap-5">
                                 <div>
-                                    <Image className="w-[12rem] h-[12rem] rounded-xl border border-black/20" src="/images/newpr.jpg" width={200} height={400} alt="hero image" />
+                                    <Image className="w-[12rem] h-[12rem] rounded-xl border border-black/20 object-cover" src="/images/ir.jpg" width={200} height={200} alt="hero image" />
                                 </div>
                                 <button className="self-start rounded-full p-1.5 hover:bg-white/20"><Ellipsis className="text-white" /> </button>
                             </div>

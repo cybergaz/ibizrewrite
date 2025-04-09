@@ -1,0 +1,19 @@
+{
+    "background_color": "#000000",
+    "display": "standalone",
+    "icons": [
+        {
+            "sizes": "192x192",
+            "src": "/favicon/favicon.ico",
+            "type": "image/ico"
+        },
+        {
+            "sizes": "512x512",
+            "src": "/favicon/favicon.ico",
+            "type": "image/ico"
+        }
+    ],
+    "name": "IBK Engineers",
+    "short_name": "iBizKart",
+    "theme_color": "#000000"
+}

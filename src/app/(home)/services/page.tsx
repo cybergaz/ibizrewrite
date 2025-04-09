@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, LoaderCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { LogoCarouselComp } from "@/components/other/logo-carousel";

@@ -1,13 +1,23 @@
 import { ArrowUpRight, Share2, Heart, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
-export default async function ProductDetails({
-    params,
-}: {
-    params: Promise<{ product: string }>
-}) {
-    const { product } = await params
+type Props = {
+    params: Promise<{ 'product-details': string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { 'product-details': productDetails } = await params;
+    return {
+        title: `${productDetails.replace(/-/g, ' ').toUpperCase()} | Ibizkart`,
+        description: `${productDetails.replace(/-/g, ' ')} - ibizkart engineers (best industrial products supplier in india)`,
+        metadataBase: new URL('https://ibizkart.com/products'),
+    };
+}
+
+export default async function ProductDetails({ params }: Props) {
+    const { 'product-details': product } = await params;
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-12">

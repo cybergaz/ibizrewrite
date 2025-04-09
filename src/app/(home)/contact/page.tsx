@@ -1,20 +1,18 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import { User, Mail, Phone } from "lucide-react"
 import { submitContactForm, type ContactFormData } from "@/lib/actions"
 import Image from "next/image"
-import Link from "next/link"
 
 export default function ContactForm() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<ContactFormData>({
         firstName: "",
         lastName: "",
         email: "",
         phone: "",
         message: "",
+        countryCode: "+91",
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [formStatus, setFormStatus] = useState<{
@@ -36,7 +34,7 @@ export default function ContactForm() {
         setFormStatus(null)
 
         try {
-            const result = await submitContactForm(formData as ContactFormData)
+            const result = await submitContactForm(formData)
             setFormStatus(result)
 
             if (result.success) {
@@ -46,6 +44,7 @@ export default function ContactForm() {
                     email: "",
                     phone: "",
                     message: "",
+                    countryCode: "+91",
                 })
             }
         } catch (error) {
@@ -59,19 +58,19 @@ export default function ContactForm() {
     }
 
     return (
-        <div className="flex flex-col gap-10 md:gap-20 mt-8 md:mt-16 overflow-hidden max-sm:px-2">
+        <div className="flex flex-col gap-10 md:gap-20 mt-8 md:mt-16 overflow-hidden">
             <Image className="fixed inset-0 -mt-20 w-screen -z-10 bg-contain" src="/images/illustration.jpg" alt="Contact Us" width={1920} height={1080} />
-            <div className="max-w-[85rem] mx-auto flex flex-col md:flex-row border border-accent-magenta/30 rounded-2xl">
+            <div className="max-w-[85rem] flex flex-col md:flex-row mx-auto border border-accent-magenta/30 rounded-2xl">
                 {/* Left Section with Illustration */}
                 <div className="relative w-full md:w-md flex justify-start items-end rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
-                    <Image className="absolute h-full w-full inset-0 -z-10 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none" src="/images/contact_banner.jpg" alt="Contact Us" width={500} height={1080} />
+                    <Image className="absolute h-full w-full inset-0 -z-10 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none blur-[2px]" src="/images/contact_banner.jpg" alt="Contact Us" width={500} height={1080} />
                     <div className="z-10 p-6 md:p-10 flex flex-col gap-2">
                         <h1 className="text-xl md:text-2xl font-bold">CONTACT US</h1>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-xs md:textsm text-gray-700">
                             Email, call, or complete the form if you have any questions or
                             would like to learn more about our products.
                         </p>
-                        <div className="space-y-2 md:space-y-3 text-sm mt-3">
+                        <div className="space-y-2 md:space-y-3 text-xs md:text-sm mt-3">
                             <div className="flex items-center gap-2 text-gray-700">
                                 <Mail className="h-3 w-3 md:h-4 md:w-4" />
                                 <a href="mailto:ibksales@ibizkart.com" className="hover:underline">
@@ -81,7 +80,7 @@ export default function ContactForm() {
 
                             <div className="flex items-center gap-2 text-gray-700">
                                 <Phone className="h-3 w-3 md:h-4 md:w-4" />
-                                <a href="tel:321-221-231" className="hover:underline">
+                                <a href="tel:+918048890627" className="hover:underline">
                                     +91 8048890627
                                 </a>
                             </div>
@@ -233,7 +232,7 @@ export default function ContactForm() {
                 </div>
             </div>
 
-            <div className="py-10 md:py-20 bg-[#CCC6E1]/90 backdrop-blur-sm max-sm:rounded-2xl max-sm:mb-10">
+            <div className="py-10 md:py-20 bg-[#CCC6E1]/90 backdrop-blur-sm">
                 <div className="max-w-[82rem] mx-auto flex flex-col md:flex-row px-4 md:px-0">
                     <div className="w-full md:w-1/2 overflow-hidden rounded-2xl mb-6 md:mb-0">
                         <iframe

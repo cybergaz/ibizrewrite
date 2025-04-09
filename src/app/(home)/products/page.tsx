@@ -6,7 +6,7 @@ import { isFuzzyMatch, normalizeSearchQuery } from '@/lib/search-utils'
 import Image from 'next/image'
 import { useEffect, useState, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { PRODUCTS } from '@/lib/constants'
+import { ELECTRICAL_PRODUCTS, PRODUCTS } from '@/lib/constants'
 import SearchBar from '@/components/ui/search-bar'
 import { ChevronDown } from 'lucide-react'
 import Getintouch from '@/components/other/contact-us'
@@ -100,7 +100,7 @@ const Products = () => {
                 placeholder="Search products..."
                 className="mb-3"
             />
-            <h1 className='text-lg font-semibold'>Categories</h1>
+            <h1 className='text-lg font-semibold'>CATEGORIES</h1>
             <div className='flex flex-col gap-2 pl-1'>
                 {PRODUCTS.map((category, index) => (
                     <button
@@ -116,6 +116,25 @@ const Products = () => {
                         )}
                     >
                         {category.category}
+                    </button>
+                ))}
+            </div>
+            <h1 className='text-lg font-semibold mt-5'>ELECTRICAL PRODUCTS</h1>
+            <div className='flex flex-col gap-2 pl-1'>
+                {ELECTRICAL_PRODUCTS.map((product, index) => (
+                    <button
+                        key={index}
+                        onClick={() => {
+                            setSelectedItems(product.items);
+                            setSelectedCategory(product.brand);
+                            setSearchResults(null);
+                        }}
+                        className={cn(
+                            "p-1 px-3 flex justify-start items-center rounded-[5px] transition-all duration-200 hover:bg-accent-magenta/20 cursor-pointer",
+                            selectedCategory === product.brand && "bg-accent-magenta/20"
+                        )}
+                    >
+                        {product.brand}
                     </button>
                 ))}
             </div>

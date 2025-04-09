@@ -22,7 +22,11 @@ const Navbar = () => {
                 <div className="hidden min-[500px]:flex items-center gap-2">
                     <SearchBar />
                     <Button className="cursor-pointer text-sm rounded-md bg-accent-magenta/10 text-accent-magenta hover:bg-accent-magenta/20 transition-colors duration-300">
-                        Download Brochure
+                        <Link
+                            href={"/ibizkart.pdf"}
+                        >
+                            Download Brochure
+                        </Link>
                     </Button>
                 </div>
                 <div className="hidden max-[960px]:flex items-center justify-center">
@@ -38,7 +42,11 @@ const Navbar = () => {
                                 <div className="flex flex-col gap-2 p-2">
                                     <Navlinks className="flex flex-col gap-2" onLinkClick={() => setIsMenuOpen(false)} />
                                     <Button className="cursor-pointer w-fit self-center text-sm rounded-md bg-accent-magenta/10 text-accent-magenta hover:bg-accent-magenta/20 transition-colors duration-300">
-                                        Download Brochure
+                                        <Link
+                                            href={"/ibizkart.pdf"}
+                                        >
+                                            Download Brochure
+                                        </Link>
                                     </Button>
                                 </div>
                             </div>

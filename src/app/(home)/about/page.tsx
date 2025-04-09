@@ -14,6 +14,13 @@ import {
     HeartHandshake
 } from 'lucide-react';
 import Getintouch from "@/components/other/contact-us";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "About Us",
+    description: 'about us page ibizkart engineers (best industrial products supplier in india)',
+    metadataBase: new URL('https://ibizkart.com/about'),
+};
 
 const features = [
     {
@@ -120,9 +127,9 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                <div className="bg-accent-magenta w-screen flex justify-center items-center py-12 md:py-20">
+                <div className="bg-accent-magenta w-screen flex justify-center items-center py-12 md:py-14 md:pb-20">
                     <div className="max-w-[85rem] mx-auto px-4 md:px-8 lg:px-32 flex flex-col gap-6 md:gap-10 justify-center items-center">
-                        <h1 className="text-3xl md:text-4xl text-white font-bold">Our Goal</h1>
+                        <h1 className="text-3xl md:text-4xl text-white font-bold font-jost">Our Goal</h1>
                         <p className="text-xl md:text-2xl font-light text-zinc-100 text-center">
                             Enable Indian industries to access global-quality components faster, smarter, and more cost-effectively—helping businesses reduce downtime, boost efficiency, and maintain production continuity.
                         </p>
