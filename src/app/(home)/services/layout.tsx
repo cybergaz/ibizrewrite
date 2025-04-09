@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
     title: "Our Services",
     description: 'services that ibizkart engineers provides (best industrial products supplier in india)',
-    metadataBase: new URL('https://ibizkart.com/services'),
+    metadataBase: new URL(siteConfig.url),
 };
 
 export default function ServicesPageLayout({

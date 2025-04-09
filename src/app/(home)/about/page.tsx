@@ -15,11 +15,12 @@ import {
 } from 'lucide-react';
 import Getintouch from "@/components/other/contact-us";
 import { Metadata } from 'next';
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
     title: "About Us",
     description: 'about us page ibizkart engineers (best industrial products supplier in india)',
-    metadataBase: new URL('https://ibizkart.com/about'),
+    metadataBase: new URL(siteConfig.url),
 };
 
 const features = [
