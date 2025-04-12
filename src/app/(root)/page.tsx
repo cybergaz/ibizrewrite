@@ -1,16 +1,14 @@
 import { Metadata } from 'next';
 import { siteConfig } from "@/config/site";
-// Top selling -> alluminium profile, hiwin linear guide, ball screws, epson robots, gearboxes
 
 import BenefitsSection from "@/components/other/benifits-section";
 import { FaqSection } from "@/components/other/faq";
 import { LogoCarouselComp } from "@/components/other/logo-carousel";
 import ProductCategory from "@/components/other/product_category";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowUpRight, User, Package, Diamond, Ellipsis, Layers2, Wrench } from "lucide-react";
+import { ArrowUpRight, Ellipsis } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ImagesSlider } from "@/components/ui/image-slider";
+
 import {
     ShoppingCart,
     Globe,
@@ -70,11 +68,6 @@ const jsonLd = {
 };
 
 async function Homepage() {
-    const images = [
-        "https://images.unsplash.com/photo-1485433592409-9018e83a1f0d?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    ];
 
     const DEMO_FAQS = [
         {
@@ -138,7 +131,7 @@ async function Homepage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <main className="-mt-16" role="main">
+            <div className="-mt-16" role="main">
                 <div className="fixed inset-0 -z-20 w-screen h-screen" aria-hidden="true">
                     <Image
                         className="h-screen w-screen object-cover blur-2xl"
@@ -628,7 +621,7 @@ async function Homepage() {
 
                 <Getintouch />
                 <LogoCarouselComp />
-            </main>
+            </div>
         </>
     );
 }

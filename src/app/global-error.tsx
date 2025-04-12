@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { MoveLeft, RotateCw, TriangleAlert } from "lucide-react";
+import { MoveLeft, TriangleAlert } from "lucide-react";
 
 // import { siteConfig } from "@/config/site";
 // import { Button } from "@/components/ui/button";
@@ -12,7 +11,7 @@ type Props = {
     reset: () => void;
 };
 
-export default function GlobalError({ error, reset }: Props) {
+export default function GlobalError({ error }: Props) {
     return (
         <div className="fixed inset-0 z-50 grid h-screen place-items-center bg-[#f2f2f2]">
             <div className="space-y-4 rounded-[2rem] border-dashed border-black bg-white p-4 sm:border md:p-8 md:py-12">

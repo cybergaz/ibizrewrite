@@ -13,8 +13,8 @@ export default function ProductsPageLayout({
     children: React.ReactNode;
 }) {
     return (
-        <main className="w-full min-h-screen overflow-hidden ">
+        <section className="w-full min-h-screen overflow-hidden ">
             {children}
-        </main>
+        </section>
     );
 }

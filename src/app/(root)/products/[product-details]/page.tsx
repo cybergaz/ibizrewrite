@@ -10,7 +10,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { 'product-details': productDetails } = await params;
     const formattedTitle = productDetails.replace(/-/g, ' ').toUpperCase();
-    
+
     return {
         title: `${formattedTitle} | Ibizkart`,
         description: `${formattedTitle} - ibizkart engineers (best industrial products supplier in india)`,
@@ -48,7 +48,7 @@ export default async function ProductDetails({ params }: Props) {
     const formattedTitle = product.replace(/-/g, ' ').toUpperCase();
 
     return (
-        <main className="max-w-6xl mx-auto px-4 py-12" role="main">
+        <section className="max-w-6xl mx-auto px-4 py-12" role="main">
             {/* Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb" className="mb-8">
                 <ol className="flex items-center space-x-2 text-gray-600">
@@ -72,7 +72,7 @@ export default async function ProductDetails({ params }: Props) {
                             priority
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
-                        <button 
+                        <button
                             className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
                             aria-label="Share product"
                         >
@@ -135,14 +135,14 @@ export default async function ProductDetails({ params }: Props) {
 
                     {/* Action Buttons */}
                     <div className="flex gap-4 pt-6">
-                        <button 
+                        <button
                             className="flex-1 flex items-center justify-center gap-2 bg-black text-white p-4 rounded-full hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
                             aria-label="Request quote for product"
                         >
                             <ShoppingCart className="size-5" aria-hidden="true" />
                             <span>Request Quote</span>
                         </button>
-                        <button 
+                        <button
                             className="p-4 border-2 border-gray-300 rounded-full hover:border-gray-400 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
                             aria-label="Add to favorites"
                         >
@@ -167,6 +167,6 @@ export default async function ProductDetails({ params }: Props) {
                     </section>
                 </section>
             </div>
-        </main>
+        </section>
     );
 }

@@ -114,7 +114,7 @@ const Products = () => {
                     {JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "ItemList",
-                        "itemListElement": PRODUCTS.map((category, index) => ({
+                        "itemListElement": PRODUCTS.map((category) => ({
                             "@type": "ItemList",
                             "name": category.category,
                             "itemListElement": category.items.map((item, itemIndex) => ({
@@ -131,11 +131,11 @@ const Products = () => {
                 </script>
             </Head>
             <div className='min-h-screen relative' role="main">
-                <Image 
-                    className="fixed -z-30 w-screen h-screen object-cover inset-0" 
-                    src="/images/home_bg3.png" 
-                    alt="Products background" 
-                    width={1920} 
+                <Image
+                    className="fixed -z-30 w-screen h-screen object-cover inset-0"
+                    src="/images/home_bg3.png"
+                    alt="Products background"
+                    width={1920}
                     height={1080}
                     priority
                 />
@@ -154,7 +154,7 @@ const Products = () => {
                         </button>
 
                         {isDropdownOpen && (
-                            <div 
+                            <div
                                 id="category-dropdown"
                                 className="absolute z-50 w-full mt-1 bg-white/70 backdrop-blur-md rounded-md border border-accent-magenta/10 shadow-md max-h-[60vh] overflow-y-auto"
                                 role="listbox"
@@ -179,7 +179,7 @@ const Products = () => {
                     </div>
 
                     {/* Desktop sidebar */}
-                    <aside 
+                    <aside
                         className='sticky top-0 hidden sm:flex self-start p-5 rounded-lg max-h-[80vh] overflow-y-auto border border-accent-magenta/10 bg-accent-magenta/5 w-72 flex-col gap-3'
                         aria-label="Product navigation"
                     >

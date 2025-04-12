@@ -10,8 +10,6 @@ import {
     BadgeCheck,
     Cpu,
     Truck,
-    IndianRupee,
-    HeartHandshake
 } from 'lucide-react';
 import Getintouch from "@/components/other/contact-us";
 import { Metadata } from 'next';
@@ -97,24 +95,24 @@ const AboutPage = () => {
     ];
 
     return (
-        <main role="main">
+        <section role="main">
             <div className="w-screen mx-auto mt-20 flex flex-col gap-16 md:gap-32 justify-center items-start">
-                <Image 
-                    className="object-cover fixed inset-0 w-screen h-screen blur-xs -z-10" 
-                    src="/images/about_page_bg_blurred.jpg" 
-                    alt="Decorative background image" 
-                    width={1920} 
+                <Image
+                    className="object-cover fixed inset-0 w-screen h-screen blur-xs -z-10"
+                    src="/images/about_page_bg_blurred.jpg"
+                    alt="Decorative background image"
+                    width={1920}
                     height={1080}
                     aria-hidden="true"
                 />
                 <section className="max-w-[85rem] px-4 md:px-5 mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-10">
                     <div className="w-full md:w-auto">
-                        <Image 
-                            className="aspect-3/2 object-cover rounded-3xl w-full" 
-                            src="/images/pexels-photo-7178310.jpeg" 
-                            alt="Industrial equipment and machinery in a modern facility" 
-                            width={600} 
-                            height={400} 
+                        <Image
+                            className="aspect-3/2 object-cover rounded-3xl w-full"
+                            src="/images/pexels-photo-7178310.jpeg"
+                            alt="Industrial equipment and machinery in a modern facility"
+                            width={600}
+                            height={400}
                         />
                     </div>
                     <div className="flex flex-col w-full md:w-1/2 gap-6 md:gap-10 justify-center">
@@ -161,12 +159,12 @@ const AboutPage = () => {
                 <section className="max-w-[85rem] px-4 md:px-5 mx-auto flex flex-col gap-12 md:gap-20">
                     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-14 w-full">
                         <div className="w-full md:w-1/2 order-2 md:order-1">
-                            <Image 
-                                className="aspect-3/2 rounded-3xl w-full" 
-                                src="/images/header_img.png" 
-                                alt="Modern industrial facility with advanced machinery" 
-                                width={600} 
-                                height={500} 
+                            <Image
+                                className="aspect-3/2 rounded-3xl w-full"
+                                src="/images/header_img.png"
+                                alt="Modern industrial facility with advanced machinery"
+                                width={600}
+                                height={500}
                             />
                         </div>
                         <div className="w-full md:w-1/2 order-1 md:order-2 flex flex-col flex-wrap gap-4 md:gap-5 mt-0 md:mt-10">
@@ -184,12 +182,12 @@ const AboutPage = () => {
 
                     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-14 w-full">
                         <div className="w-full md:w-1/2 order-2">
-                            <Image 
-                                className="aspect-3/2 rounded-3xl w-full" 
-                                src="/images/pexels-photo-24739784.webp" 
-                                alt="Quality control inspection of industrial components" 
-                                width={600} 
-                                height={500} 
+                            <Image
+                                className="aspect-3/2 rounded-3xl w-full"
+                                src="/images/pexels-photo-24739784.webp"
+                                alt="Quality control inspection of industrial components"
+                                width={600}
+                                height={500}
                             />
                         </div>
                         <div className="w-full md:w-1/2 order-1 flex flex-col flex-wrap gap-4 md:gap-5 mt-0 md:mt-10">
@@ -207,12 +205,12 @@ const AboutPage = () => {
 
                     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-14 w-full">
                         <div className="w-full md:w-1/2 order-2 md:order-1">
-                            <Image 
-                                className="aspect-3/2 rounded-3xl w-full" 
-                                src="/images/pexels-photo-11294358.webp" 
-                                alt="Industrial automation and robotics solutions" 
-                                width={600} 
-                                height={500} 
+                            <Image
+                                className="aspect-3/2 rounded-3xl w-full"
+                                src="/images/pexels-photo-11294358.webp"
+                                alt="Industrial automation and robotics solutions"
+                                width={600}
+                                height={500}
                             />
                         </div>
                         <div className="w-full md:w-1/2 order-1 md:order-2 flex flex-col flex-wrap gap-4 md:gap-5 mt-0 md:mt-5">
@@ -271,7 +269,7 @@ const AboutPage = () => {
 
             <Getintouch />
             <LogoCarouselComp />
-        </main>
+        </section>
     )
 }
 

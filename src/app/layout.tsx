@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Jost, Inter, Bodoni_Moda, Ibarra_Real_Nova, Atkinson_Hyperlegible } from 'next/font/google'
+import { Jost, Inter } from 'next/font/google'
 import { siteConfig } from "@/config/site";
 
 const jost = Jost({
