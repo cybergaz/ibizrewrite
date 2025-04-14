@@ -70,11 +70,10 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
                     <motion.div
                         key={`${currentLogo.id}-${currentIndex}`}
                         className="absolute inset-0 flex items-center justify-center"
-                        initial={{ y: "10%", opacity: 0, filter: "blur(8px)" }}
+                        initial={{ y: "10%", opacity: 0 }}
                         animate={{
                             y: "0%",
                             opacity: 1,
-                            filter: "blur(0px)",
                             transition: {
                                 type: "spring",
                                 stiffness: 300,
@@ -87,7 +86,6 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
                         exit={{
                             y: "-20%",
                             opacity: 0,
-                            filter: "blur(6px)",
                             transition: {
                                 type: "tween",
                                 ease: "easeIn",
@@ -131,10 +129,10 @@ const useMediaQuery = (query: string) => {
 export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
     const [logoSets, setLogoSets] = useState<Logo[][]>([])
     const [currentTime, setCurrentTime] = useState(0)
-    
+
     const isMobile = useMediaQuery("(max-width: 640px)")
     const isTablet = useMediaQuery("(max-width: 1024px)")
-    
+
     const responsiveColumnCount = useMemo(() => {
         if (isMobile) return 3
         if (isTablet) return 5
