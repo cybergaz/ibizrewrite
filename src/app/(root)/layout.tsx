@@ -7,13 +7,11 @@ export default function HomeLayout({
     children: React.ReactNode;
 }) {
     return (
-        <main className="w-full min-h-screen overflow-hidden ">
+        <>
             <Header className="h-20" />
             <div className="h-24" /> {/* Used as a space between FIXED header and rest of layout */}
-
             {children}
-
             <Footer />
-        </main>
+        </>
     );
 }

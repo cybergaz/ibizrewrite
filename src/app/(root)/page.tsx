@@ -21,8 +21,8 @@ import Getintouch from "@/components/other/contact-us";
 import { HeroVideoDialog } from "@/components/ui/video-dialog";
 
 export const metadata: Metadata = {
-    title: "IBK Engineers | Best Industrial Products Supplier in India",
-    description: "Leading supplier of industrial products, automation solutions, and engineering components. Offering high-quality products from trusted global brands with pan-India delivery.",
+    title: "IBK Engineers Pvt. Ltd | Trusted Industrial Equipment Supplier",
+    description: "IBK Engineers is a leading supplier of industrial equipment and engineering solutions. Discover high-quality products for automation, mechanical, and tooling needs.",
     keywords: siteConfig.keywords,
     openGraph: {
         title: "IBK Engineers | Best Industrial Products Supplier in India",
@@ -126,7 +126,7 @@ async function Homepage() {
     ];
 
     return (
-        <>
+        <main>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -154,6 +154,10 @@ async function Homepage() {
                                 thumbnailAlt="Watch our company introduction video"
                             />
                         </div>
+                        {/* <div className='flex flex-col gap-2'> */}
+                        {/*     <h1 className='text-2xl font-bold text-accent-magenta'>IBK Engineers <span className='h-5 mx-2 w-px inline-block bg-accent-magenta' /> Since 2013 </h1> */}
+                        {/*     <h2> leading wholesale suppplier of industrial equipment in india </h2> */}
+                        {/* </div> */}
                         {/* <ImagesSlider */}
                         {/*     className="h-[20rem] sm:h-[25.5rem] rounded-3xl" */}
                         {/*     overlay={false} */}
@@ -622,7 +626,7 @@ async function Homepage() {
                 <Getintouch />
                 <LogoCarouselComp />
             </div>
-        </>
+        </main>
     );
 }
 

@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-    title: "Products",
-    description: 'products range ibizkart engineers (best industrial products supplier in india)',
+    title: "Industrial Products | Ball Screws, Bearings, Couplings & More",
+    description: "Explore our wide range of industrial products including ball screws, bearings, couplings, and more. Quality engineering components from top brands.",
     metadataBase: new URL(siteConfig.url),
 };
 

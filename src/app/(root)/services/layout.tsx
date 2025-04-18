@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-    title: "Our Services",
-    description: 'services that ibizkart engineers provides (best industrial products supplier in india)',
+    title: "Import Services from USA & Worldwide | IBK Engineers",
+    description: "IBK Engineers Pvt. Ltd. offers reliable import services from the USA and other countries, with complete door-to-door delivery solutions.",
     metadataBase: new URL(siteConfig.url),
 };
 

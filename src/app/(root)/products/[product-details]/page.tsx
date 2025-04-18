@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const formattedTitle = productDetails.replace(/-/g, ' ').toUpperCase();
 
     return {
-        title: `${formattedTitle} | Ibizkart`,
+        title: `${formattedTitle} | IBK Engineers Pvt. Ltd | Trusted Industrial Equipment Supplier`,
         description: `${formattedTitle} - ibizkart engineers (best industrial products supplier in india)`,
         metadataBase: new URL('https://ibizkart.com/products'),
         openGraph: {

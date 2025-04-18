@@ -17,10 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteConfig.url),
-    title: {
-        default: `${siteConfig.name} | Best Industrial Products Supplier in India`,
-        template: `%s | ${siteConfig.name}`,
-    },
+    title: "IBK Engineers Pvt. Ltd | Trusted Industrial Equipment Supplier",
     description: siteConfig.description,
     keywords: siteConfig.keywords,
     manifest: '/site.webmanifest',
